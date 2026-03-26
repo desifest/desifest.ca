@@ -6,10 +6,7 @@ import tiktok from '../../Assets/COMMON/image.png'
 
 const navItems = [
     { label: 'The 2026 Concert', path: '/concerts' },
-    { label: 'About', path: '/about' },
-    { label: 'Community', path: '/community' },
     { label: 'Booking', path: '/booking' },
-    { label: 'Media', path: '/media' },
     { label: 'UMA', path: '/umafoundation' },
 ]
 
