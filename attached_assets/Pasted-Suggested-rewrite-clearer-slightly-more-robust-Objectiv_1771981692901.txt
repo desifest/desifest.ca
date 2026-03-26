@@ -1,0 +1,44 @@
+Suggested rewrite (clearer + slightly more robust)
+
+Objective
+Eliminate production content flicker caused by the client briefly showing fallback copy and then replacing it with stale CMS values. Ensure the CMS API always returns the latest content and that the production database is corrected if it contains known stale values.
+
+Tasks
+
+T001: Force fresh CMS API responses + add build/version visibility
+Blocked By: []
+Details:
+	•	Add Cache-Control: no-store, no-cache, must-revalidate, max-age=0 (and Pragma: no-cache) on /api/page-content/:pageSlug to prevent browser/proxy caching.
+	•	Add /api/version endpoint that returns build timestamp (and optionally git SHA).
+	•	Optionally include X-Build-Version header in CMS API responses.
+Files: server/index.js
+Acceptance:
+	•	CMS API responses are not cached (confirmed via response headers).
+	•	/api/version confirms which build is live in production.
+
+T002: One-time data correction migration for known stale CMS fields
+Blocked By: []
+Details:
+	•	Add a one-time migration to correct only the specific fields (hero_subtitle, day1_title, day1_description).
+	•	Guard it so it runs once (migrations table) and only updates values if they match known stale content (to avoid overwriting future edits).
+	•	Log changes made.
+Files: server/index.js
+Acceptance:
+	•	After deployment, production DB reflects correct values and migration does not re-run.
+
+T003: Verify deployment + validate no flicker
+Blocked By: [T001, T002]
+Details:
+	•	Rebuild and redeploy.
+	•	Confirm /api/version matches the latest release.
+	•	Confirm /api/page-content/concert (or relevant slug) returns correct values consistently.
+	•	Hard refresh + cold load tests (incognito) confirm no stale copy appears.
+Acceptance:
+	•	Production shows correct copy reliably, and flicker is eliminated or reduced to non-visible levels.
+
+(Optional but recommended) T004: Remove UI “fallback swap” behavior
+Blocked By: []
+Details:
+	•	Adjust client rendering so fallback copy doesn’t render if CMS content is available, or delay render until CMS fetch completes.
+Acceptance:
+	•	No visible content swap on initial load, even on slow connections.

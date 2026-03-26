@@ -1,0 +1,173 @@
+PRODUCT REQUIREMENTS DOCUMENT
+
+Project: UMA Centre for Arts and Music – Phase 1 Landing Page
+Owner: UMA Foundation
+Primary Audience: Government and Grant Reviewers
+Type: Single Page Informational Website
+
+⸻
+
+1. Objective
+
+Build a professional, credibility focused single page website that clearly communicates:
+
+• Who UMA Centre is
+• What it does
+• Why it matters
+• Its nonprofit status in Ontario
+
+This page must support grant applications and funding conversations.
+
+⸻
+
+2. Page Structure and Final Copy
+
+⸻
+
+SECTION 1 – HERO
+
+Header:
+UMA Centre for Arts and Music
+
+Subheader:
+A Program of UMA Foundation, Ontario Non Profit
+
+Core Statement:
+Every immigrant story begins with sacrifice.
+UMA Centre is an anchor for identity and a bridge to community, connection and opportunity.
+
+CTA Button:
+Learn More
+
+Design Notes:
+• Warm, intergenerational image
+• Clean typography
+• No animation overload
+
+⸻
+
+SECTION 2 – WHO WE ARE
+
+Heading:
+Who We Are
+
+Copy:
+UMA Centre for Arts and Music is a community based cultural and creative development hub operating under UMA Foundation, an Ontario non profit organization.
+
+Named in honor of founder Sathish Bala’s mother, UMA represents the strength, resilience, and sacrifice of immigrant families across Canada. The Centre exists to preserve cultural identity, strengthen community belonging, and expand equitable access to creative and economic pathways in the arts.
+
+UMA Centre transforms generational sacrifice into structured opportunity through sustainable programming and community infrastructure.
+
+⸻
+
+SECTION 3 – WHAT WE DO
+
+Heading:
+What We Do
+
+Block 1: Cultural Preservation
+We deliver multilingual and intergenerational programming that protects heritage, strengthens identity, and ensures cultural traditions are practiced and sustained within Canada’s evolving arts landscape.
+
+Block 2: Youth and Emerging Artist Development
+We provide mentorship, skill development workshops, and industry readiness training to support youth and emerging artists in building confidence, leadership, and creative careers.
+
+Block 3: Creative Economic Pathways
+We support artists through professional development, grant readiness guidance, production labs, and partnerships that connect talent to viable economic opportunities.
+
+Block 4: Community Engagement
+We host accessible events, collaborative programming, and partnerships that increase participation in the arts across newcomer and immigrant communities.
+
+⸻
+
+SECTION 4 – WHY IT MATTERS
+
+Heading:
+Why It Matters
+
+Copy:
+Immigrant communities contribute significantly to Canada’s cultural landscape, yet access to structured artistic development and sustainable creative pathways remains limited.
+
+UMA Centre addresses this gap by:
+
+• Protecting and celebrating cultural identity
+• Increasing equitable access to arts participation
+• Supporting youth leadership and confidence
+• Strengthening social cohesion through community engagement
+• Contributing to Ontario’s creative economy
+
+By combining cultural preservation with professional development, UMA Centre ensures heritage is not lost and opportunity is not limited.
+
+⸻
+
+SECTION 5 – GOVERNANCE AND STRUCTURE
+
+Heading:
+Governance and Structure
+
+Copy:
+UMA Centre operates under UMA Foundation, an incorporated Ontario non profit organization governed by a Board of Directors.
+
+The Foundation maintains transparent financial oversight, community accountability, and compliance with provincial nonprofit regulations.
+
+The Centre builds upon a strong track record of cultural programming and community engagement through initiatives such as DESIFEST and related arts programming.
+
+⸻
+
+SECTION 6 – VISION
+
+Heading:
+Our Vision
+
+Copy:
+UMA Centre is designed as a permanent cultural infrastructure model that anchors identity while expanding access to opportunity.
+
+Through sustainable governance, strategic partnerships, and measurable outcomes, UMA Centre seeks to strengthen community capacity and advance inclusive cultural participation across Ontario.
+
+⸻
+
+SECTION 7 – CONTACT
+
+Heading:
+Partnership and Funding Inquiries
+
+Copy:
+UMA Centre for Arts and Music
+Ontario, Canada
+
+Operated by UMA Foundation
+
+For partnership, funding, or collaboration inquiries, please contact:
+[Insert Email Address]
+
+⸻
+
+3. Technical Requirements
+
+• Fully responsive (mobile first)
+• Page load under 2 seconds
+• SEO optimized (proper H1, meta title, description)
+• Hosted under UMA Foundation domain (recommended: /uma-centre)
+• Google Analytics installed
+• WCAG compliant color contrast
+
+⸻
+
+4. Design Direction
+
+Tone: Institutional, warm, credible
+Avoid: Festival branding, heavy gradients, excessive motion
+Colors: Earth tones, neutral base, subtle cultural texture
+Typography: Clean, professional, readable
+
+The page must feel like long term infrastructure, not a startup landing page.
+
+⸻
+
+5. Success Criteria
+
+The page succeeds if:
+
+• A grant reviewer understands the mission within 30 seconds
+• Nonprofit credibility is immediately clear
+• Vision feels structured and realistic
+• It can be referenced directly in grant applications

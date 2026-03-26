@@ -1,0 +1,197 @@
+Good. Those are not side notes. Those are proof of legitimacy.
+
+Year round programming shows sustainability.
+DESIFEST shows track record and scale.
+Micro funding shows leadership, not just hosting.
+
+We’ll integrate them cleanly without breaking the modern institutional tone.
+
+Below is the updated PRD with copy, same structure, now including:
+
+• Year round programming
+• DESIFEST as flagship platform
+• Micro funding for curators
+
+Still disciplined. Still modern.
+
+⸻
+
+PRODUCT REQUIREMENTS DOCUMENT
+
+Project: UMA – Phase 1 Website
+Owner: UMA Foundation
+Primary Audience: Government and Grant Reviewers
+Type: Single Page Institutional Landing Page
+
+⸻
+
+1. Objective
+
+Build a modern, credibility focused single page website that clearly communicates:
+
+• Who UMA is
+• What UMA does
+• Why UMA matters
+• Its nonprofit status in Ontario
+• Its year round programming and flagship initiatives
+
+This page must support grant applications and institutional partnerships.
+
+⸻
+
+2. Page Structure and Final Copy
+
+⸻
+
+SECTION 1 – HERO
+
+UMA
+
+Culture. Forward.
+
+A Cultural Initiative of UMA Foundation
+Ontario Non Profit
+
+Every immigrant story begins with sacrifice.
+UMA is an anchor for identity and a bridge to community, connection and opportunity.
+
+CTA: Learn More
+
+⸻
+
+SECTION 2 – WHO WE ARE
+
+UMA is a cultural initiative operating under UMA Foundation, an incorporated Ontario non profit organization.
+
+Named in honor of founder Sathish Bala’s mother, UMA represents the strength and resilience of immigrant families whose sacrifice built opportunity for the next generation.
+
+UMA transforms that generational resilience into structured cultural infrastructure. We protect identity, strengthen belonging, and expand access to creative and economic opportunity.
+
+UMA operates year round through programming, mentorship, public events, and strategic partnerships that advance South Asian arts and culture across Ontario.
+
+⸻
+
+SECTION 3 – WHAT WE DO
+
+Cultural Preservation
+
+We deliver multilingual and intergenerational programming that ensures heritage remains active, practiced, and relevant within Canada’s evolving arts landscape.
+
+Year Round Programming
+
+UMA operates continuous programming throughout the year, including workshops, artist development initiatives, mentorship sessions, community gatherings, and public showcases that strengthen participation and creative growth.
+
+Flagship Initiative: DESIFEST
+
+UMA is the driving force behind DESIFEST, Canada’s leading South Asian music festival. For nearly two decades, DESIFEST has provided a major public platform for emerging and established artists while strengthening cultural visibility at a national level.
+
+Creative Economic Pathways
+
+We support artists and creatives through grant readiness guidance, entrepreneurship workshops, production labs, and structured pathways to viable economic opportunity within the creative sector.
+
+Micro Funding and Curator Support
+
+UMA provides micro funding and support to independent curators and community organizers, enabling grassroots cultural initiatives and expanding community led programming capacity across the region.
+
+⸻
+
+SECTION 4 – WHY IT MATTERS
+
+Immigrant communities contribute significantly to Canada’s cultural and economic landscape, yet structured pathways for preservation, participation, and advancement remain limited.
+
+UMA addresses this gap by:
+
+• Protecting and advancing cultural identity
+• Increasing equitable access to arts participation
+• Supporting youth leadership and creative confidence
+• Strengthening social cohesion
+• Contributing to Ontario’s creative economy
+• Enabling community led cultural initiatives through micro funding
+
+By combining heritage preservation with forward facing opportunity, UMA ensures culture is not only remembered, but advanced.
+
+⸻
+
+SECTION 5 – GOVERNANCE AND STRUCTURE
+
+UMA operates under UMA Foundation, an incorporated Ontario non profit governed by a Board of Directors.
+
+The Foundation maintains transparent financial oversight, regulatory compliance, and community accountability.
+
+UMA builds upon a proven track record of cultural programming and large scale public engagement through initiatives such as DESIFEST and ongoing year round programming.
+
+⸻
+
+SECTION 6 – VISION
+
+UMA is designed as permanent cultural infrastructure.
+
+We anchor identity while moving culture forward. We strengthen belonging while expanding opportunity.
+
+Through disciplined governance, measurable outcomes, year round programming, and strategic partnerships, UMA advances inclusive cultural participation across Ontario.
+
+UMA converts private sacrifice into public structure. It builds for generations.
+
+⸻
+
+SECTION 7 – CONTACT
+
+UMA
+Culture. Forward.
+
+A Cultural Initiative of UMA Foundation
+Ontario, Canada
+
+For partnership, funding, or collaboration inquiries:
+[Insert Email Address]
+
+⸻
+
+3. Technical Requirements
+
+• Fully responsive
+• Page load under 2 seconds
+• Clean URL structure (/uma)
+• SEO optimized
+• Google Analytics installed
+• Accessible design compliance
+
+⸻
+
+4. Design Direction
+
+Modern, restrained, institutional.
+
+No festival visuals dominating. DESIFEST can be referenced with a clean image or subtle highlight, not as the primary visual identity.
+
+White space heavy. Strong typography. One accent color only.
+
+⸻
+
+5. Success Criteria
+
+The page succeeds if:
+
+• Grant reviewers see track record through DESIFEST
+• Year round programming signals sustainability
+• Micro funding signals ecosystem leadership
+• Nonprofit credibility is clear
+• The brand feels institutional and scalable
+
+⸻
+
+Now here is the strategic layer.
+
+Mentioning DESIFEST gives you authority.
+
+Mentioning year round programming gives you sustainability.
+
+Mentioning micro funding positions UMA as a funder, not just a host.
+
+That shifts perception upward.
+
+Now let me ask you something important:
+
+Do you want DESIFEST visually subordinated under UMA, or do you want it positioned as “An Initiative of UMA”?
+
+That hierarchy decision matters long term.

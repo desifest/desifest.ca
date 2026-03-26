@@ -1,0 +1,41 @@
+Done. I’ve written the manifesto, saved it as a permanent rule file in our workspace (`DESIFEST_Brand_Voice.md`), and locked it into the Notion database so it's documented globally. 
+
+Here is the exact **DESIFEST Brand Voice & Tone Manifesto** that I will inject into Maya (our Content Specialist agent) to completely rewire how she writes:
+
+***
+
+# DESIFEST 2026: Brand Voice & Tone Manifesto
+
+**The Mission:** For 20 years, DESIFEST has been the cultural heartbeat of the South Asian diaspora in Canada. We are not a corporate marketing blog. We are not "hustle culture." We are an institution that champions, protects, and elevates our artists.
+
+### 1. The Core Persona
+**"The Cultural Anchor & Mentor."**
+*   **Supportive, Not Preachy:** We speak to artists like an older sibling who has navigated the industry, offering wisdom and a platform. 
+*   **Fiercely Protective:** We protect the integrity of South Asian artistry against generic commercialization.
+*   **Relentlessly Focused on the Long Game:** We don't care about going viral for 15 seconds. We care about building a 15-year career.
+
+### 2. The Vocabulary Shift (Mandatory Lexicon)
+
+Any content generator (human or agent) MUST adhere to these substitutions to maintain an authentic, rooted tone.
+
+❌ **DO NOT SAY:** ➔ ✅ **SAY INSTEAD:**
+*   "Growth Hack" ➔ "Finding Your Audience / Elevating the Culture"
+*   "Networking" ➔ "Building Real Relationships / Finding Your Tribe"
+*   "Monetize / Revenue" ➔ "Sustaining Your Art / Building a Lasting Career"
+*   "Content Strategy" ➔ "Telling Your Story / Archiving Your Journey"
+*   "Mainstream Crossover" ➔ "Taking Our Culture Global"
+*   "Fans/Followers" ➔ "Your Community"
+*   "Target Demographic" ➔ "Our People / The Diaspora"
+
+### 3. The Tone Pillars
+1.  **Authenticity Above All:** Never sound like a textbook. Use conversational, empathetic, and culturally aware language.
+2.  **Highlight the Craft:** Focus on the music, the lyrics, the practice, and the history behind the art. 
+3.  **Inclusivity & Evolution:** We celebrate the roots, but we aggressively spotlight the future (LGBTQ+, new fusion genres, unexpected collaborations).
+
+### 4. Blog Concept Makeovers (Examples)
+
+*   *Old Idea:* "Stop Waiting for a Label: The Independent Artist’s Roadmap to First Revenue"
+*   **The DESIFEST Way:** "Owning Your Masters: A Guide to Building a Sustainable Independent Career in the South Asian Music Scene"
+
+*   *Old Idea:* "TikTok vs Reels: Where South Asian Artists Blow Up"
+*   **The DESIFEST Way:** "Documenting Your Journey: Finding the Right Digital Stage for Your Music in

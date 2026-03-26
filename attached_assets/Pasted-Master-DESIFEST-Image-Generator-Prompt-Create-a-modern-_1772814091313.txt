@@ -1,0 +1,77 @@
+Master DESIFEST Image Generator Prompt
+
+Create a modern, culturally grounded illustration for a South Asian music platform in Toronto.
+
+The scene should feel realistic, urban, and contemporary, reflecting the South Asian diaspora music scene.
+
+Avoid fantasy or traditional costume imagery.
+
+Focus on young artists performing live music in a modern city environment. Include elements like microphones, DJ equipment, guitars, keyboards, or drums. The performers should represent a mix of South Asian identities and modern street style.
+
+The setting should feel like an outdoor music stage in downtown Toronto, with a diverse crowd enjoying the performance.
+
+Style should resemble editorial illustration or poster art, inspired by modern music festival branding.
+
+Color palette should align with DESIFEST branding:
+
+deep purple
+electric neon accents
+warm stage lighting
+modern graphic contrast
+
+The mood should feel:
+
+energetic
+inclusive
+authentic
+community-driven
+
+Avoid:
+
+fantasy temples
+exaggerated cultural costumes
+overly decorative Bollywood-style scenes
+symmetrical AI-looking compositions
+
+The image should feel like a cultural music movement happening now, not a historical or fantasy scene.
+
+⸻
+
+Short Prompt Version (For quick generation)
+
+Modern South Asian diaspora music festival in Toronto, young artists performing hip hop and fusion music on stage, diverse urban crowd, contemporary streetwear, live instruments and DJ equipment, night concert lighting, editorial poster illustration style, deep purple and neon color palette, authentic multicultural atmosphere, inspired by real music festivals.
+
+⸻
+
+Blog Cover Prompt (Best for SEO articles)
+
+Editorial illustration of the South Asian diaspora music scene in Toronto, young musicians collaborating across genres like hip hop, Punjabi, Tamil and electronic music, urban city backdrop, modern stage lighting, contemporary street style clothing, authentic cultural energy, designed like a music magazine cover, minimal and modern composition.
+
+⸻
+
+Better Style Direction for DESIFEST
+
+The aesthetic should feel closer to:
+
+• Pitchfork editorial art
+• Spotify festival posters
+• VICE music illustrations
+• Boiler Room visuals
+
+NOT:
+
+• Bollywood posters
+• Cultural tourism ads
+• Folk festival imagery
+
+DESIFEST represents modern culture, not heritage nostalgia.
+
+⸻
+
+One More Trick (Very Important)
+
+To stop AI images from looking generic, add this phrase to prompts:
+
+“composition should feel like real event photography translated into illustration”
+
+That single instruction reduces the artificial look dramatically.

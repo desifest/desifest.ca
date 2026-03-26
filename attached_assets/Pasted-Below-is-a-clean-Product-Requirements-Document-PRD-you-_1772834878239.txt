@@ -1,0 +1,323 @@
+Below is a clean Product Requirements Document (PRD) you can give directly to your Replit developer. It is structured the way product teams expect: objective, scope, architecture, UX, technical implementation, and deliverables.
+
+⸻
+
+Product Requirements Document
+
+DESIFEST Community Page – South Asian Charts Feed
+
+Project Name
+
+DESIFEST South Asian Charts Integration
+
+Owner
+
+DESIFEST
+
+Product Context
+
+The DESIFEST website includes a Community page intended to support emerging South Asian artists and fans. To make the page more dynamic and culturally relevant, we want to integrate a live South Asian music charts experience that surfaces trending songs and artists.
+
+The feature will embed a curated YouTube playlist representing South Asian trending music and optionally pull metadata using the YouTube Data API to display individual tracks.
+
+The goal is to make the DESIFEST community page feel alive, current, and connected to what the culture is listening to right now.
+
+⸻
+
+Objectives
+	1.	Surface trending South Asian music on the DESIFEST community page.
+	2.	Provide a live listening experience through an embedded playlist.
+	3.	Highlight artists and tracks relevant to the South Asian diaspora.
+	4.	Position DESIFEST as a hub for music discovery and artist visibility.
+	5.	Create an easily maintainable system that can be updated without code changes.
+
+⸻
+
+Success Criteria
+
+The feature is successful if:
+	•	The Community page displays a live playable playlist.
+	•	Tracks are updated regularly through playlist updates.
+	•	Users can listen directly on the page.
+	•	Users can click through to YouTube for the full playlist.
+	•	Admins can update the playlist without modifying code.
+
+⸻
+
+Feature Overview
+
+The Community page will include a new section called:
+
+South Asian Charts Now
+
+This section will display:
+	•	A featured YouTube playlist player
+	•	Playlist title and description
+	•	Featured artist highlights
+	•	A link to view the full playlist on YouTube
+
+Optional enhancement:
+	•	Track list with thumbnails
+	•	View counts
+	•	Release date
+	•	Artist name
+
+⸻
+
+User Experience
+
+Section Placement
+
+Community page structure:
+
+Community Hero
+Community resources
+South Asian Charts Now (new section)
+Artist resources
+Community discussions
+
+⸻
+
+Section Layout
+
+Header
+
+South Asian Charts Now
+
+Subtext:
+
+Live listening from across the South Asian music scene. Curated for the DESIFEST community.
+
+⸻
+
+Content Block
+
+Left side:
+
+Embedded playlist player
+
+Right side:
+
+Track highlights showing:
+
+Artist
+Track name
+Thumbnail
+Watch button
+
+⸻
+
+Footer
+
+Button:
+
+Open Full Playlist on YouTube
+
+⸻
+
+Admin Experience
+
+Admin should be able to update the playlist using a simple configuration file or CMS entry.
+
+Config example:
+
+{
+  "title": "South Asian Charts Now",
+  "playlistId": "YOUTUBE_PLAYLIST_ID",
+  "updatedAt": "2026-03-06",
+  "featuredArtists": [
+    "AP Dhillon",
+    "Karan Aujla",
+    "Shubh"
+  ]
+}
+
+Updating the playlist ID automatically refreshes the player and track list.
+
+⸻
+
+Technical Architecture
+
+Frontend
+
+Framework: existing DESIFEST site stack in Replit
+
+Component:
+
+SouthAsianChartsFeed
+
+Responsibilities:
+	•	Render playlist embed
+	•	Display track metadata
+	•	Display featured artists
+
+Embed source:
+
+https://www.youtube.com/embed/videoseries?list=PLAYLIST_ID
+
+
+⸻
+
+Backend
+
+Optional API endpoint:
+
+/api/south-asian-playlist
+
+Purpose:
+
+Fetch playlist items using the YouTube Data API.
+
+API endpoint used:
+
+playlistItems.list
+
+Returns:
+
+Video title
+Thumbnail
+Artist/channel
+Video ID
+Published date
+
+Example response:
+
+{
+  items: [
+    {
+      title: "Song Name",
+      artist: "Artist Name",
+      thumbnail: "image-url",
+      videoId: "video-id"
+    }
+  ]
+}
+
+
+⸻
+
+Environment Variables
+
+Store YouTube API key securely in Replit secrets.
+
+YOUTUBE_API_KEY
+
+
+⸻
+
+Data Sources
+
+Primary:
+
+YouTube playlist curated by DESIFEST.
+
+Optional additional sources in future:
+
+Spotify trending playlists
+Official Asian Music Chart
+Apple Music charts
+
+⸻
+
+Performance Requirements
+
+Playlist data should be cached for 30 minutes to avoid excessive API requests.
+
+Fallback behavior:
+
+If API fails:
+	•	Display playlist embed only
+	•	Hide track metadata
+
+⸻
+
+Design Requirements
+
+Visual style should match DESIFEST branding.
+
+Recommended elements:
+
+Rounded cards
+Artist thumbnails
+Play icons
+Subtle hover effects
+
+Dark mode compatible.
+
+⸻
+
+Mobile Experience
+
+The player must be responsive.
+
+Layout behavior:
+
+Desktop:
+
+Player left
+Track list right
+
+Mobile:
+
+Player stacked above track list
+
+⸻
+
+Future Enhancements
+
+Phase 2 possibilities:
+
+Artist spotlight module
+Genre filters (Punjabi, Tamil, Bollywood, Diaspora)
+Regional charts (Canada, India, UK)
+DESIFEST alumni highlights
+Real time trending signals
+
+⸻
+
+Risks
+
+YouTube Music URLs cannot be embedded directly.
+
+Solution:
+
+Use the equivalent YouTube playlist ID.
+
+⸻
+
+Deliverables
+
+Developer should deliver:
+	1.	South Asian Charts section component
+	2.	Playlist embed integration
+	3.	Optional API route for playlist items
+	4.	Config file for playlist ID management
+	5.	Responsive styling
+	6.	Community page integration
+
+⸻
+
+Estimated Development Time
+
+Initial version:
+
+4 to 8 hours
+
+Full version with API metadata:
+
+1 to 2 days
+
+⸻
+
+Strategic Impact
+
+This feature helps position DESIFEST as:
+	•	A cultural authority
+	•	A discovery platform for artists
+	•	A live pulse of South Asian music
+
+It transforms the Community page from static content into a living music ecosystem.
+
+⸻
+
+If you want, I can also give you three stronger versions of this feature that would make the DESIFEST site feel like Billboard for South Asian music in North America, which would be a much bigger strategic play.

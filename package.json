@@ -1,0 +1,51 @@
+{
+  "name": "desifest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"PORT=3000 node server/index.js\" \"vite\"",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "bcryptjs": "^3.0.3",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "framer-motion": "^12.34.0",
+    "jsonwebtoken": "^9.0.3",
+    "lenis": "^1.3.17",
+    "lucide-react": "^0.563.0",
+    "multer": "^2.0.2",
+    "openai": "^6.27.0",
+    "pg": "^8.18.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.5.0",
+    "react-omnisend": "^1.1.4",
+    "react-router-dom": "^7.12.0",
+    "resend": "^6.9.2",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "vite": "^7.2.4"
+  },
+  "overrides": {
+    "minimatch": "10.2.3",
+    "rollup": "4.59.0"
+  }
+}

@@ -1,0 +1,12 @@
+# Ignore artifacts:
+dist
+coverage
+node_modules
+
+# Ignore config files that have their own formatting
+package.json
+yarn.lock
+
+# Ignore generated files
+*.min.js
+*.min.css

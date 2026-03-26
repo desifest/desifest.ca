@@ -1,0 +1,236 @@
+Love this direction. Let me do both — write the full PRD for Replit to build, and create a visual mockup in Canva so you can see exactly what it looks like before a single line of code is written.
+Let me start with the mockup first, then the PRD.​​​​​​​​​​​​​​​​
+
+Now let me build the UI mockups — artist directory page, artist profile, and booking flow:​​​​​​​​​​​​​​​​
+
+Good — now let me save the best candidates and write the full PRD:​​​​​​​​​​​​​​​​
+
+All saved. Here are your links:
+📄 PRD Document: https://www.canva.com/d/2qAkJf561idlb7H
+🖥️ Artist Directory Page Mockup: https://www.canva.com/d/sLYefZiyfzI_X5T
+👤 Artist Profile + Booking Mockup: https://www.canva.com/d/F-GdR1PyHmDHsFz
+
+Now here is the full PRD — ready to paste directly into Replit or hand to any developer:
+
+Desifest Artist Registry & Booking — PRD v1.0
+Product: desifest.ca Artist Registry & Booking Feature
+Owner: Sathish Bala, CEO — Desifest / UMA Foundation
+Status: Draft v1.0
+Target launch: Before June 19, 2026 festival
+
+1. Problem Statement
+There are no agencies, labels, or booking platforms serving South Asian artists in Canada. Event organizers — corporate events, universities, weddings, Diwali parties, brand activations — have no way to discover and book verified South Asian artists. Desifest has relationships with every significant artist in this space but currently captures zero revenue from facilitated bookings.
+
+2. Goals
+	∙	Create a searchable public artist directory on desifest.ca
+	∙	Enable direct booking enquiries from clients to artists via the platform
+	∙	Allow Desifest to earn a 15% commission on confirmed bookings
+	∙	Give artists a professional profile and credibility boost
+	∙	Generate passive recurring revenue from bookings year-round
+
+3. Success Metrics
+
+
+
+|Metric                     |6-month target|
+|---------------------------|--------------|
+|Artists registered         |50+           |
+|Booking enquiries submitted|30+/month     |
+|Confirmed bookings         |10+/month     |
+|Monthly commission revenue |$3,000–$6,000 |
+|Page visits                |2,000+/month  |
+
+4. User Types
+Artist (supply side)
+Emerging or established South Asian musician, DJ, dancer, spoken word artist, or band based in Canada.
+Needs:
+	∙	A professional public profile
+	∙	Visibility to event organizers
+	∙	A simple way to receive and manage booking requests
+	∙	Credibility through the Desifest brand association
+Client / Event Organizer (demand side)
+Corporate event planner, university multicultural club, wedding planner, brand activation manager, private event host.
+Needs:
+	∙	Browse and filter artists by genre, city, price, availability
+	∙	See demos, bios, past performances
+	∙	Send a booking request easily
+	∙	Know pricing upfront or get a quote
+Admin (Desifest team)
+Sathish Bala and Desifest team managing the platform.
+Needs:
+	∙	Approve/reject artist profiles before they go live
+	∙	See all booking enquiries and their status
+	∙	Track commissions owed and paid
+	∙	Feature or promote specific artists
+
+5. Core Features — Phase 1 (MVP)
+5.1 Artist Registry / Directory Page
+URL: desifest.ca/artists
+	∙	Search bar — search by name or keyword
+	∙	Filter pills:
+	∙	Genre: All / Bhangra / Bollywood / Hip Hop / Classical / Folk / DJ / Spoken Word / Dance / Other
+	∙	City: All / Toronto / Vancouver / Montreal / Calgary / Ottawa / Hamilton / Durham
+	∙	Availability: Available now / Available weekends
+	∙	Price range: $ / ￼$
+	∙	Artist cards in grid layout showing:
+	∙	Profile photo (circular)
+	∙	Artist name
+	∙	Genre tags (max 3)
+	∙	City
+	∙	Star rating (from reviews)
+	∙	Price range indicator
+	∙	“View Profile” CTA button
+	∙	Sort by: Featured / Newest / Most booked / Rating
+	∙	Pagination or infinite scroll
+
+5.2 Individual Artist Profile Page
+URL: desifest.ca/artists/[artist-slug]
+Header section:
+	∙	Banner image
+	∙	Profile photo
+	∙	Artist name
+	∙	Verified Desifest badge (if approved)
+	∙	Genre tags
+	∙	City
+	∙	Star rating + number of reviews
+	∙	Number of confirmed bookings
+	∙	Price range or starting price
+	∙	Social links (Instagram, YouTube, Spotify, SoundCloud)
+Tabs:
+About tab:
+	∙	Bio (500 words max)
+	∙	Performance types offered (checklist): Corporate events / Weddings / Festivals / Universities / Private parties / Virtual events
+	∙	Languages spoken / performed in
+	∙	Typical set length
+	∙	Technical requirements (PA system, stage size, etc.)
+	∙	Availability calendar (visual, not booking engine — just shows blocked dates)
+Media tab:
+	∙	Up to 6 photos
+	∙	Up to 3 YouTube/video embed links
+	∙	1 music player embed (Spotify, SoundCloud, or audio file)
+	∙	1 featured press quote
+Reviews tab:
+	∙	Client reviews with star rating, date, event type
+	∙	Only clients who booked through Desifest can leave reviews
+Booking sidebar (sticky on desktop):
+	∙	Event date picker
+	∙	Event type dropdown
+	∙	Estimated audience size
+	∙	City / venue
+	∙	Budget range
+	∙	Message to artist
+	∙	“Send Booking Request” red CTA button
+	∙	Small note: “Desifest takes a 15% facilitation fee on confirmed bookings”
+
+5.3 Booking Request Flow
+Step 1 — Client submits request
+	∙	Client fills booking sidebar form
+	∙	Client creates a free account (email + password) or logs in
+	∙	Request submitted → status: Pending
+Step 2 — Notification
+	∙	Artist receives email notification with enquiry details
+	∙	Desifest admin receives copy of all requests
+Step 3 — Artist responds
+	∙	Artist logs into dashboard
+	∙	Can: Accept / Decline / Counter-offer (different date or price)
+	∙	Response sent to client via email + platform notification
+Step 4 — Confirmation
+	∙	Client and artist agree on terms
+	∙	Booking status: Confirmed
+	∙	Desifest issues invoice to client for 15% commission
+	∙	Payment collected via Stripe
+Step 5 — Post-event
+	∙	Client receives email to leave a review
+	∙	Review published after moderation
+
+5.4 Artist Dashboard (logged in)
+	∙	Edit profile
+	∙	Upload/update media
+	∙	View incoming booking requests + status
+	∙	Accept / decline / counter requests
+	∙	Availability calendar management
+	∙	Earnings summary (gross bookings, Desifest commission, net to artist)
+	∙	Messages thread with clients
+
+5.5 Client Dashboard (logged in)
+	∙	View submitted booking requests + status
+	∙	Message artist
+	∙	Confirm or cancel bookings
+	∙	Leave reviews for completed bookings
+	∙	Save / shortlist favourite artists
+
+5.6 Admin Dashboard (Desifest internal)
+	∙	Review and approve/reject new artist applications
+	∙	Feature or pin specific artists to top of directory
+	∙	View all booking requests across platform
+	∙	Track commission payments (pending / paid)
+	∙	Manually mark bookings as confirmed
+	∙	Basic analytics: page views, enquiries, conversion rate
+
+6. Artist Onboarding Flow
+Entry point: desifest.ca/artists/join OR button on directory page
+	1.	Create account (email + password)
+	2.	Basic info: Name, stage name, genre, city, bio
+	3.	Upload profile photo + banner
+	4.	Add media: photos, video links, music links
+	5.	Set availability: Available / Not available + blocked dates
+	6.	Set pricing: Starting price OR “Request quote”
+	7.	Performance types offered
+	8.	Submit for review
+	9.	Desifest admin approves → profile goes live
+	10.	Artist receives confirmation email with profile link
+
+7. Monetization Model
+
+
+
+|Revenue type               |Amount            |Trigger                                |
+|---------------------------|------------------|---------------------------------------|
+|Booking commission         |15% of booking fee|On confirmed booking                   |
+|Featured listing (optional)|$25/month         |Artist opts in to be featured at top   |
+|Verified badge (optional)  |$50/year          |Artist pays for priority review + badge|
+
+Commission example:
+	∙	Client books artist for $1,500
+	∙	Desifest invoices client $225 (15%)
+	∙	Artist receives $1,500 from client directly
+	∙	Desifest collects commission separately
+
+8. Tech Stack Recommendations (for Replit build)
+
+
+
+|Component   |Recommended                                             |
+|------------|--------------------------------------------------------|
+|Frontend    |Next.js or plain HTML/CSS/JS                            |
+|Backend     |Node.js + Express                                       |
+|Database    |PostgreSQL (via Supabase — easy setup)                  |
+|Auth        |Supabase Auth or Clerk                                  |
+|File storage|Supabase Storage or Cloudinary                          |
+|Payments    |Stripe                                                  |
+|Email       |Resend or SendGrid                                      |
+|Hosting     |Replit + custom domain [desifest.ca](http://desifest.ca)|
+
+9. Phase 2 — Future Features (post-MVP)
+	∙	Direct messaging between artists and clients within platform
+	∙	Contract generation — auto-generate simple performance contract on confirmation
+	∙	Calendar sync — Google Calendar / iCal integration for artists
+	∙	Artist-to-artist discovery — artists find collaborators, not just clients
+	∙	OpenMic integration — performers auto-imported from OpenMic registrations
+	∙	Mobile app — React Native version
+	∙	Subscription tier — artists pay $15/month for premium placement + analytics
+
+10. Timeline
+
+
+
+|Milestone                     |Target date     |
+|------------------------------|----------------|
+|PRD approved                  |March 2026      |
+|Design finalized              |April 2026      |
+|MVP build complete            |May 15, 2026    |
+|Beta with 20 artists          |May 22, 2026    |
+|Public launch                 |June 1, 2026    |
+|Festival push at Desifest 2026|June 19–20, 2026|
+
+This PRD is Replit-ready — paste it into a Replit AI prompt and it will have everything it needs to start scaffolding the project. Want me to also write the Replit AI prompt to kick off the build, or go deeper on any specific section? 🚀​​​​​​​​​​​​​​​​

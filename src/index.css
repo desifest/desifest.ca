@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* =========================================================
+   DESIFEST THEME VARIABLES
+   ========================================================= */
+@theme {
+  --color-neon-yellow: #EEFE08;
+  --color-deep-purple: #453361;
+  --color-coral-red: #ED4B59;
+  --color-soft-lavender: #BCA6DF;
+  --color-light-lavender: #C6B7DD;
+  --color-off-white-lavender: #F5F1FB;
+  --color-midnight-purple: #26193A;
+  --color-pure-white: #FFFFFF;
+  --color-glass-white: #FEFEFE1F;
+  --color-blue-black: #100422;
+}
+
+/* =========================================================
+   SCROLLBAR UTILITIES (HIDE BUT KEEP SCROLL)
+   ========================================================= */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+/* =========================================================
+   FONT UTILITIES — DM SANS
+   ========================================================= */
+.dm-sans-300 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: light;
+}
+
+.dm-sans-400 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: regular;
+}
+
+.dm-sans-500 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: medium;
+}
+.dm-sans-600 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: medium;
+}
+.dm-sans-700 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: medium;
+}
+
+/* =========================================================
+   FONT UTILITIES — OSWALD
+   ========================================================= */
+.oswald-heading {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 188.5px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.oswald-500 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+.oswald-300 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+}
+
+.oswaldd {
+  font-family: "Oswald", sans-serif;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* =========================================================
+   FONT UTILITIES — KRONA ONE
+   ========================================================= */
+.krona-one-regular {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.clip-rounded {
+  clip-path: inset(0 round 24px);
+  transition: clip-path 0.5s ease;
+}
+
+.group:hover .clip-rounded {
+  clip-path: inset(0 round 999px);
+}
+
+
+/* =========================================================
+  FONT UTILITIES - SPECIAL GOTHIC EXPANDED ONE
+   ========================================================= */
+   .special-gothic-one-regular {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+  @font-face {
+    font-family: "HelveticaNeueMedium";
+    src: url("./Fonts/HelveticaNeueLight.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .helva {
+    font-family: "HelveticaNeueMedium";
+  }
+
+  /* Clamp to 3 lines with ellipsis */
+.description-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;     /* Number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.jersey {
+  font-family: "Jersey 10", sans-serif;
+}
+
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.input-field {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  color: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-field::placeholder {
+  color: #6b7280;
+}
+.input-field:focus {
+  border-color: #D5FF00;
+}
+.input-field option {
+  background: #1a0e2e;
+  color: white;
+}

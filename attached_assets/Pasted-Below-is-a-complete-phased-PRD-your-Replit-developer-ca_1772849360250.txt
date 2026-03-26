@@ -1,0 +1,560 @@
+Below is a complete phased PRD your Replit developer can execute.
+It assumes you already have the artist signup form and want to convert it into profiles + discovery + opportunities infrastructure.
+
+The goal is to launch quickly, seed the ecosystem, and expand without overbuilding.
+
+⸻
+
+Product Requirements Document
+
+DESIFEST Artist Network + Opportunities Platform
+
+Project Name
+DESIFEST Artist Network
+
+Owner
+DESIFEST
+
+Platform
+desifest.ca
+
+Development Environment
+Replit
+
+⸻
+
+Product Vision
+
+DESIFEST will evolve from a festival website into a year round platform that connects South Asian music creators.
+
+The platform will:
+
+• Convert artist submissions into public profiles
+• Enable discovery of artists and collaborators
+• Surface music charts and trends
+• Provide a central board for gig and collaboration opportunities
+
+This positions DESIFEST as infrastructure for the South Asian music ecosystem, not just an annual event.
+
+⸻
+
+Core Product Pillars
+	1.	Artist Profiles
+	2.	Creator Discovery
+	3.	Opportunity Pipeline
+	4.	Music Trends and Charts
+	5.	Artist Coaching and Resources
+
+⸻
+
+PHASE 1
+
+Artist Profiles Infrastructure
+
+Goal
+Turn the existing artist signup pipeline into a live artist directory.
+
+This phase focuses on turning submission data into structured public profiles.
+
+Timeline
+1–2 weeks
+
+⸻
+
+Features
+
+Artist Database
+
+Store all artist signup data in a structured database.
+
+Recommended fields:
+
+Artist Name
+City
+Country
+Role
+Genres
+Languages
+Bio
+Instagram
+Spotify
+YouTube
+Website
+Press photo
+Submission date
+
+Optional fields:
+
+Looking for collaborators
+Available for gigs
+Seeking producers
+Seeking videographers
+
+⸻
+
+Automatic Profile Generation
+
+When an artist submits through:
+
+desifest.ca/artistsignup
+
+The system should:
+
+Store the submission
+Generate a public artist profile
+Create a unique artist URL
+
+Example URL structure
+
+desifest.ca/artists/artist-name
+
+⸻
+
+Artist Profile Page
+
+Each profile should display:
+
+Artist name
+City
+Genres
+Languages
+Bio
+Embedded music links
+Social links
+Press photo
+
+Optional section
+
+Looking for collaborations
+
+Example:
+
+Looking for:
+
+Producer
+Female vocalist
+Live band members
+Videographer
+
+⸻
+
+Admin Controls
+
+Admin panel should allow:
+
+Approve or hide profiles
+Edit artist fields
+Feature artists
+Mark artists as DESIFEST alumni
+
+⸻
+
+Database Recommendation
+
+Use:
+
+Replit Postgres
+
+Tables:
+
+artists
+artist_genres
+artist_roles
+artist_languages
+
+⸻
+
+SEO Requirements
+
+Profiles must generate SEO friendly URLs.
+
+Example
+
+desifest.ca/artists/punjabi-artist-toronto
+
+Add metadata:
+
+Artist Name | DESIFEST Artist Network
+
+⸻
+
+PHASE 2
+
+Artist Discovery Engine
+
+Goal
+Allow artists and fans to discover creators by location, genre, and role.
+
+Timeline
+1 week
+
+⸻
+
+Features
+
+Artist Directory Page
+
+URL
+
+desifest.ca/artists
+
+Display:
+
+Artist cards
+
+Each card shows:
+
+Photo
+Artist name
+City
+Genre tags
+
+⸻
+
+Filters
+
+Users should be able to filter by:
+
+City
+Country
+Genre
+Role
+Language
+
+Examples
+
+Punjabi artists in Toronto
+Tamil rappers in Vancouver
+Producers in Montreal
+
+⸻
+
+Search Function
+
+Keyword search
+
+Examples
+
+Singer
+DJ
+Producer
+
+⸻
+
+Artist Map (Optional)
+
+Interactive map showing artist locations.
+
+This can be implemented later using Mapbox.
+
+⸻
+
+PHASE 3
+
+Opportunities Board
+
+Goal
+Create a centralized place for collaboration and gig opportunities.
+
+Timeline
+1 week
+
+⸻
+
+Opportunities Page
+
+URL
+
+desifest.ca/opportunities
+
+⸻
+
+Opportunity Types
+
+Gig opportunities
+Festival submissions
+Collaboration requests
+Producer looking for vocalists
+Studio session calls
+Grant opportunities
+Music video casting
+
+⸻
+
+Opportunity Fields
+
+Title
+Category
+City
+Description
+Deadline
+Paid or unpaid
+Contact info
+
+⸻
+
+Filters
+
+City
+Category
+Deadline
+
+⸻
+
+Posting Rules
+
+Initially:
+
+Only DESIFEST admin can post opportunities.
+
+Later:
+
+Verified artists can submit opportunities.
+
+⸻
+
+Submission Form
+
+Create a simple form:
+
+Submit an Opportunity
+
+Admin approval required.
+
+⸻
+
+PHASE 4
+
+South Asian Charts Integration
+
+Goal
+Add real time music discovery to the community page.
+
+Timeline
+2–3 days
+
+⸻
+
+Feature
+
+South Asian Charts Now
+
+Location
+
+desifest.ca/community
+
+⸻
+
+Content
+
+Embedded YouTube playlist.
+
+Example embed:
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLAYLIST_ID">
+</iframe>
+
+
+⸻
+
+Playlist Configuration
+
+Store playlist in config file.
+
+Example
+
+playlistId
+title
+updated date
+
+Admin can change playlist easily.
+
+⸻
+
+Optional Enhancement
+
+Use YouTube Data API to display:
+
+Track list
+Thumbnail
+Artist
+Views
+
+⸻
+
+PHASE 5
+
+Artist Coaching Hub
+
+Goal
+Provide structured guidance for emerging artists.
+
+Timeline
+1–2 weeks
+
+⸻
+
+Page
+
+desifest.ca/artistlab
+
+⸻
+
+Content Types
+
+Marketing playbooks
+Release strategies
+Brand building
+Touring tips
+Grant guides
+
+⸻
+
+AI Assistant
+
+Optional later phase:
+
+DESIFEST Artist Coach
+
+Chat feature that pulls from:
+
+Blogs
+Videos
+Industry resources
+
+⸻
+
+PHASE 6
+
+Creator Messaging (Future)
+
+Goal
+Allow artists to contact each other directly.
+
+Timeline
+Future phase
+
+⸻
+
+Features
+
+Artist to artist messaging
+Collaboration requests
+Notification system
+
+⸻
+
+Technical Stack
+
+Backend
+
+Node / Express
+
+Database
+
+Postgres
+
+Hosting
+
+Replit
+
+Frontend
+
+React or existing site framework
+
+⸻
+
+Security
+
+Add basic moderation tools.
+
+Admin can:
+
+Remove profiles
+Remove opportunities
+Block spam
+
+⸻
+
+Data Strategy
+
+This platform will generate valuable ecosystem data:
+
+Artist locations
+Genres
+Collaboration networks
+Emerging markets
+
+This can support:
+
+Festival programming
+Sponsor insights
+Grant applications
+
+⸻
+
+Launch Strategy
+
+Before public launch:
+
+Seed the directory with:
+
+DESIFEST alumni
+OpenMic performers
+Past applicants
+
+Target initial dataset:
+
+200–500 artists
+
+⸻
+
+Success Metrics
+
+Artist profiles created
+Search usage
+Opportunity postings
+Return visits
+Collaboration outcomes
+
+⸻
+
+Estimated Development Timeline
+
+Phase 1
+
+1–2 weeks
+
+Phase 2
+
+1 week
+
+Phase 3
+
+1 week
+
+Phase 4
+
+2–3 days
+
+Total
+
+3–4 weeks
+
+⸻
+
+Strategic Impact
+
+This platform positions DESIFEST as:
+
+Artist discovery engine
+Collaboration hub
+Cultural infrastructure
+Industry connector
+
+DESIFEST evolves from festival organizer to ecosystem platform for South Asian music creators.
+
+⸻
+
+If you want, I can also give you the one feature that would make this platform explode in growth with almost zero marketing, and it connects directly to your OpenMic pipeline.

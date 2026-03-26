@@ -1,0 +1,250 @@
+This is exactly the right refinement.
+
+Right now, your messaging blends:
+
+• UMA as the operating organization (already active)
+• UMA Foundation Centre as the future physical space (2027 vision)
+
+They need to be clearly separated.
+
+Otherwise, funders get confused about what exists today versus what is planned.
+
+Based on your prospectus  ￼, the physical vision includes:
+
+• 3,500 to 6,000 sq ft space
+• Recording studio
+• Modular learning pods
+• Sound treated rehearsal rooms
+• Daytime education via Schoolio
+• Evening cultural programming via DESIFEST
+• Phased rollout plan
+
+That is clearly Phase 2 infrastructure.
+
+So here is how we restructure the website PRD properly.
+
+Two clean blocks:
+	1.	UMA Today
+	2.	UMA Centre 2027 Vision
+
+Modern. Institutional. Clear separation.
+
+Below is the updated PRD with copy reflecting that.
+
+⸻
+
+PRODUCT REQUIREMENTS DOCUMENT
+
+Project: UMA Website – Phase 1
+Owner: UMA Foundation
+Primary Audience: Government and Grant Reviewers
+Type: Single Page Institutional Website
+
+⸻
+
+1. Objective
+
+Build a modern institutional landing page that clearly communicates:
+
+• Who UMA is today
+• What programming currently exists
+• Track record and impact
+• The future physical UMA Centre vision for 2027
+• Call to action for founding supporters
+
+The page must distinguish between current operations and future expansion.
+
+⸻
+
+2. Page Structure and Final Copy
+
+⸻
+
+SECTION 1 – HERO
+
+UMA
+
+Culture. Forward.
+
+A Cultural Initiative of UMA Foundation
+Ontario Non Profit
+
+Every immigrant story begins with sacrifice.
+UMA is an anchor for identity and a bridge to community, connection and opportunity.
+
+CTA: Explore UMA
+
+⸻
+
+SECTION 2 – UMA TODAY
+
+Heading:
+UMA Today
+
+Copy:
+
+UMA is an active cultural organization operating under UMA Foundation, an incorporated Ontario non profit.
+
+We deliver year round programming that advances South Asian arts, supports youth development, and strengthens community connection across Ontario.
+
+Our current initiatives include:
+
+• Continuous cultural programming and workshops
+• Artist mentorship and professional development
+• Micro funding support for independent curators and community organizers
+• Community engagement events and collaborative programming
+• Creative economic development pathways
+
+Flagship Platform: DESIFEST
+
+UMA powers DESIFEST, Canada’s leading South Asian music festival. With nearly two decades of programming, DESIFEST has supported hundreds of artists, engaged national audiences, and built strong public and corporate partnerships.
+
+DESIFEST demonstrates UMA’s proven capacity to deliver large scale, high impact cultural programming.
+
+⸻
+
+SECTION 3 – IMPACT AND LEADERSHIP
+
+UMA operates as a cultural engine with:
+
+• 20 years of programming legacy through DESIFEST
+• Government funding partnerships
+• Corporate sponsorship history
+• Year round artist development activity
+• A growing network of curators, educators, and creatives
+
+Through micro funding and mentorship, UMA strengthens grassroots cultural leadership and expands ecosystem capacity beyond a single event.
+
+⸻
+
+SECTION 4 – THE FUTURE: UMA CENTRE 2027
+
+Heading:
+The UMA Centre – Launching 2027
+
+Copy:
+
+Building on our established programming and leadership, UMA is developing a permanent physical cultural space scheduled for launch in 2027.
+
+The UMA Centre will serve as year round cultural infrastructure combining education, music, and community programming under one roof.
+
+Planned features include:
+
+• Sound treated rehearsal studios
+• Professional recording infrastructure
+• Modular learning pods for daytime education
+• Artist lounges and collaborative workspace
+• Structured, professionally managed operations
+
+The Centre will operate as a hybrid model, supporting education during daytime hours and cultural programming in the evenings and weekends.
+
+This expansion transforms UMA from programming based organization into permanent cultural infrastructure.
+
+⸻
+
+SECTION 5 – WHY THIS MATTERS
+
+UMA represents the evolution from event based programming to sustainable cultural institution.
+
+The UMA Centre will:
+
+• Increase access to safe creative space
+• Expand youth engagement and mentorship
+• Strengthen creative economic development
+• Provide stable, professional arts infrastructure
+• Anchor cultural identity while moving culture forward
+
+⸻
+
+SECTION 6 – FOUNDING SUPPORTERS
+
+Heading:
+Join the Founding Circle
+
+Copy:
+
+As we prepare to launch the UMA Centre in 2027, we are building a founding circle of partners, advisors, and early supporters.
+
+Donation rounds and capital partnerships will open soon.
+
+We invite:
+
+• Institutional funders
+• Corporate partners
+• Community leaders
+• Founding donors
+• Strategic collaborators
+
+to join us in building permanent cultural infrastructure.
+
+Register your interest below to receive updates on funding rounds and partnership opportunities.
+
+CTA: Join the Founding Circle
+CTA: Partner With UMA
+
+⸻
+
+SECTION 7 – GOVERNANCE
+
+UMA operates under UMA Foundation, an Ontario non profit governed by a Board of Directors with transparent financial oversight and regulatory compliance.
+
+Full governance documentation available upon request.
+
+⸻
+
+3. Technical Requirements
+
+• Clear visual separation between “UMA Today” and “UMA Centre 2027”
+• Anchor navigation to jump between sections
+• Email capture form in Founding Circle section
+• Mobile responsive
+• Modern minimal design
+• Analytics tracking for founding interest signups
+
+⸻
+
+4. Design Direction
+
+Modern. Restrained. Institutional.
+
+Important:
+
+Do NOT visually present the 2027 Centre as if it already exists.
+
+Use:
+
+• Architectural renders or blueprint imagery subtly
+• Label clearly as “Planned 2027 Launch”
+• Avoid language implying current physical operations
+
+Transparency builds trust with funders.
+
+⸻
+
+5. Success Criteria
+
+The page is successful if:
+
+• Visitors understand UMA is active today
+• DESIFEST is clearly positioned as proof of leadership
+• Micro funding signals ecosystem support
+• The 2027 Centre vision feels structured and credible
+• Founding supporter call to action captures early interest
+
+⸻
+
+This separation does two powerful things:
+	1.	It shows you are not starting from zero.
+	2.	It positions the Centre as an evolution, not an idea.
+
+Now here’s the strategic hierarchy question.
+
+Do you want the 2027 Centre positioned as:
+
+A natural next phase of UMA
+or
+A transformational leap into a new era
+
+Subtle difference. Big narrative impact.
+
+Which direction feels more aligned?

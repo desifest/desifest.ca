@@ -1,0 +1,28 @@
+<svg width="1301" height="954" viewBox="0 0 1301 954" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1147_4806" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1301" height="954">
+<rect width="1301" height="954" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1147_4806)">
+<g opacity="0.4">
+<line x1="32.5" y1="-823" x2="32.4999" y2="1777" stroke="white"/>
+<line x1="279.3" y1="-823" x2="279.3" y2="1777" stroke="white"/>
+<line x1="526.1" y1="-823" x2="526.1" y2="1777" stroke="white"/>
+<line x1="772.9" y1="-823" x2="772.9" y2="1777" stroke="white"/>
+<line x1="1019.7" y1="-823" x2="1019.7" y2="1777" stroke="white"/>
+<line x1="1266.5" y1="-823" x2="1266.5" y2="1777" stroke="white"/>
+</g>
+<g opacity="0.4">
+<line x1="1301" y1="131.682" x2="-4.37115e-08" y2="131.682" stroke="white"/>
+<line x1="1301" y1="362.227" x2="-4.37115e-08" y2="362.226" stroke="white"/>
+<line x1="1301" y1="592.773" x2="-4.37115e-08" y2="592.773" stroke="white"/>
+<line x1="1301" y1="823.318" x2="-4.37115e-08" y2="823.318" stroke="white"/>
+</g>
+</g>
+<rect width="1301" height="954" fill="url(#paint0_radial_1147_4806)"/>
+<defs>
+<radialGradient id="paint0_radial_1147_4806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(650.5 477) rotate(90) scale(477 650.5)">
+<stop offset="0.67874" stop-color="#100422" stop-opacity="0"/>
+<stop offset="1" stop-color="#100422"/>
+</radialGradient>
+</defs>
+</svg>
