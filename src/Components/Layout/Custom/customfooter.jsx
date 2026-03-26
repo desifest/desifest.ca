@@ -76,7 +76,7 @@ const Footer = ({ footerColor, textcolour }) => {
                     ))}
                     <a
                         href="https://www.tiktok.com/@desifest"
-                        className="opacity-70 transition hover:opacity-100"
+                        className="opacity-80 transition hover:opacity-100"
                     >
                         <img src={tiktok} alt="TikTok" className="h-12 rounded-full border-2 border-black p-2 invert" />
                     </a>
@@ -134,7 +134,7 @@ const Footer = ({ footerColor, textcolour }) => {
 
             {/* BOTTOM */}
             <div
-                className="mt-12 flex flex-col justify-between pt-6 text-xs opacity-70 md:flex-row"
+                className="mt-12 flex flex-col justify-between pt-6 text-xs text-gray-300 md:flex-row"
                 style={{
                     borderTop: `1px solid ${finalColor}`,
                 }}

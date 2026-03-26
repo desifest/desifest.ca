@@ -136,7 +136,7 @@ const Footer = () => {
             </div>
 
             {/* BOTTOM */}
-            <div className="mt-12 flex flex-col justify-between border-t border-[#FEFDFD] pt-6 text-xs opacity-70 md:flex-row">
+            <div className="mt-12 flex flex-col justify-between border-t border-[#FEFDFD] pt-6 text-xs text-gray-300 md:flex-row">
                 <p className="text-[#FEFDFD]">
                     Copyright DESIFEST 2026. All rights reserved to the copyright owner.
                 </p>

@@ -5,11 +5,7 @@ import youtube from '../../../Assets/COMMON/youtube.svg'
 import tiktok from '@/Assets/COMMON/image.png'
 const navItems = [
     { label: 'The 2026 Concert', path: '/concerts' },
-    { label: 'About', path: '/about' },
-    { label: 'Artists', path: '/artists' },
-    { label: 'Community', path: '/community' },
     { label: 'Booking', path: '/booking' },
-    { label: 'Media', path: '/media' },
     { label: 'UMA', path: '/umafoundation' },
 ]
 
@@ -69,7 +65,7 @@ export default function VerticalNavbar({ bgColor = '#10042233', textcolour }) {
                         <a
                             key={index}
                             href="#"
-                            className="rotate-90 opacity-70 transition hover:opacity-100"
+                            className="rotate-90 opacity-80 transition hover:opacity-100"
                         >
                             <img
                                 src={icon}
@@ -83,7 +79,7 @@ export default function VerticalNavbar({ bgColor = '#10042233', textcolour }) {
                     ))}
                     <a
                         href="https://www.tiktok.com/@desifest"
-                        className="rotate-90 opacity-70 transition hover:opacity-100"
+                        className="rotate-90 opacity-80 transition hover:opacity-100"
                     >
                         <img src={tiktok} alt="TikTok" className="h-10 rounded-full border-2 border-black p-2 invert" />
                     </a>

@@ -36,7 +36,7 @@ export default function SignupPage() {
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
           <Link to="/" className="oswald-500 text-4xl uppercase text-white">DESIFEST</Link>
-          <p className="mt-2 text-gray-400">Create your account</p>
+          <p className="mt-2 text-gray-300">Create your account</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -47,7 +47,7 @@ export default function SignupPage() {
           )}
 
           <div>
-            <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-400">I am a...</label>
+            <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-300">I am a...</label>
             <div className="grid grid-cols-2 gap-3">
               <button
                 type="button"
@@ -55,7 +55,7 @@ export default function SignupPage() {
                 className={`border px-4 py-3 text-sm font-semibold uppercase transition ${
                   role === 'client'
                     ? 'border-[#D5FF00] bg-[#D5FF00]/10 text-[#D5FF00]'
-                    : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'
+                    : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'
                 }`}
               >
                 Client
@@ -66,7 +66,7 @@ export default function SignupPage() {
                 className={`border px-4 py-3 text-sm font-semibold uppercase transition ${
                   role === 'artist'
                     ? 'border-[#D5FF00] bg-[#D5FF00]/10 text-[#D5FF00]'
-                    : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'
+                    : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'
                 }`}
               >
                 Artist
@@ -76,7 +76,7 @@ export default function SignupPage() {
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">First Name</label>
+              <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">First Name</label>
               <input
                 type="text"
                 value={firstName}
@@ -86,7 +86,7 @@ export default function SignupPage() {
               />
             </div>
             <div>
-              <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Last Name</label>
+              <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Last Name</label>
               <input
                 type="text"
                 value={lastName}
@@ -98,7 +98,7 @@ export default function SignupPage() {
           </div>
 
           <div>
-            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Email</label>
+            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Email</label>
             <input
               type="email"
               value={email}
@@ -110,7 +110,7 @@ export default function SignupPage() {
           </div>
 
           <div>
-            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Password</label>
+            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Password</label>
             <input
               type="password"
               value={password}
@@ -123,7 +123,7 @@ export default function SignupPage() {
           </div>
 
           <div>
-            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Confirm Password</label>
+            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Confirm Password</label>
             <input
               type="password"
               value={confirmPassword}
@@ -144,7 +144,7 @@ export default function SignupPage() {
           </button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-gray-400">
+        <p className="mt-6 text-center text-sm text-gray-300">
           Already have an account?{' '}
           <Link to="/login" className="text-[#D5FF00] hover:underline">Sign in</Link>
         </p>

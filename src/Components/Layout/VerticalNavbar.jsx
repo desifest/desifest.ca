@@ -57,7 +57,7 @@ export default function VerticalNavbar() {
                         href="https://www.facebook.com/desiFEST"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rotate-90 opacity-70 transition hover:opacity-100"
+                        className="rotate-90 opacity-80 transition hover:opacity-100"
                     >
                         <img src={facebook} alt="Facebook" className="h-10" />
                     </a>
@@ -66,7 +66,7 @@ export default function VerticalNavbar() {
                         href="https://www.instagram.com/desifestmusic/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rotate-90 opacity-70 transition hover:opacity-100"
+                        className="rotate-90 opacity-80 transition hover:opacity-100"
                     >
                         <img src={insta} alt="Instagram" className="h-10" />
                     </a>
@@ -75,7 +75,7 @@ export default function VerticalNavbar() {
                         href="https://www.youtube.com/@desifestmusic/videos"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rotate-90 opacity-70 transition hover:opacity-100"
+                        className="rotate-90 opacity-80 transition hover:opacity-100"
                     >
                         <img src={youtube} alt="YouTube" className="h-10" />
                     </a>
@@ -83,7 +83,7 @@ export default function VerticalNavbar() {
                         href="https://www.tiktok.com/@desifest"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rotate-90 opacity-70 transition hover:opacity-100"
+                        className="rotate-90 opacity-80 transition hover:opacity-100"
                     >
                         <img src={tiktok} alt="TikTok" className="h-10 rounded-full border-2 border-black p-2 invert" />
                     </a>

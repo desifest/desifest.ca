@@ -83,7 +83,7 @@ const BookingPage = () => {
                                     <p className="text-sm font-medium text-white">
                                         {user.firstName ? `${user.firstName} ${user.lastName || ''}`.trim() : user.email}
                                     </p>
-                                    <p className="text-xs capitalize text-gray-400">{user.role} account</p>
+                                    <p className="text-xs capitalize text-gray-300">{user.role} account</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-3">
@@ -182,7 +182,7 @@ const BookingPage = () => {
                                         <div key={label} className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:border-[#D5FF00]/30">
                                             <Icon className="mb-3 h-8 w-8 text-[#D5FF00]" />
                                             <span className="oswald-500 text-2xl text-white">{count}</span>
-                                            <span className="dm-sans-400 mt-1 text-xs text-gray-400">{label}</span>
+                                            <span className="dm-sans-400 mt-1 text-xs text-gray-300">{label}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -198,7 +198,7 @@ const BookingPage = () => {
                         <h2 className="oswald-500 text-3xl uppercase text-white md:text-5xl">
                             How It <span className="text-[#D5FF00]">Works</span>
                         </h2>
-                        <p className="dm-sans-400 mx-auto mt-4 max-w-xl text-gray-400">
+                        <p className="dm-sans-400 mx-auto mt-4 max-w-xl text-gray-300">
                             Whether you're an artist looking for gigs or an event organizer booking talent, we've got you covered.
                         </p>
                     </div>
@@ -224,7 +224,7 @@ const BookingPage = () => {
                                         <div>
                                             <span className="text-xs font-bold text-[#D5FF00]/60">STEP {step}</span>
                                             <h3 className="oswald-500 mt-1 text-lg text-white">{title}</h3>
-                                            <p className="dm-sans-400 mt-1 text-sm leading-relaxed text-gray-400">{desc}</p>
+                                            <p className="dm-sans-400 mt-1 text-sm leading-relaxed text-gray-300">{desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -251,7 +251,7 @@ const BookingPage = () => {
                                         <div>
                                             <span className="text-xs font-bold text-white/40">STEP {step}</span>
                                             <h3 className="oswald-500 mt-1 text-lg text-white">{title}</h3>
-                                            <p className="dm-sans-400 mt-1 text-sm leading-relaxed text-gray-400">{desc}</p>
+                                            <p className="dm-sans-400 mt-1 text-sm leading-relaxed text-gray-300">{desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -269,7 +269,7 @@ const BookingPage = () => {
                                 <h2 className="oswald-500 text-3xl uppercase text-white md:text-5xl">
                                     Featured <span className="text-[#D5FF00]">Artists</span>
                                 </h2>
-                                <p className="dm-sans-400 mt-3 text-gray-400">
+                                <p className="dm-sans-400 mt-3 text-gray-300">
                                     Discover verified South Asian talent from across Canada.
                                 </p>
                             </div>
@@ -323,7 +323,7 @@ const BookingPage = () => {
                                         </div>
                                         <div>
                                             <h4 className="oswald-500 text-base text-white">{title}</h4>
-                                            <p className="dm-sans-400 mt-1 text-sm text-gray-400">{desc}</p>
+                                            <p className="dm-sans-400 mt-1 text-sm text-gray-300">{desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -345,7 +345,7 @@ const BookingPage = () => {
                                         </div>
                                         <div>
                                             <h4 className="oswald-500 text-base text-white">{title}</h4>
-                                            <p className="dm-sans-400 mt-1 text-sm text-gray-400">{desc}</p>
+                                            <p className="dm-sans-400 mt-1 text-sm text-gray-300">{desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -366,7 +366,7 @@ const BookingPage = () => {
                         ].map(({ value, label }) => (
                             <div key={label} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center md:p-8">
                                 <div className="oswald-500 text-3xl text-[#D5FF00] md:text-5xl">{value}</div>
-                                <div className="dm-sans-400 mt-2 text-xs uppercase tracking-wider text-gray-400 md:text-sm">{label}</div>
+                                <div className="dm-sans-400 mt-2 text-xs uppercase tracking-wider text-gray-300 md:text-sm">{label}</div>
                             </div>
                         ))}
                     </div>
@@ -379,7 +379,7 @@ const BookingPage = () => {
                         <h2 className="oswald-500 text-3xl uppercase text-white md:text-5xl">
                             Ready to <span className="text-[#D5FF00]">Get Started?</span>
                         </h2>
-                        <p className="dm-sans-400 mx-auto mt-4 max-w-lg text-gray-400">
+                        <p className="dm-sans-400 mx-auto mt-4 max-w-lg text-gray-300">
                             Join the only booking platform built for South Asian artists in Canada. Free to sign up.
                         </p>
                         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -442,7 +442,7 @@ const BookingPage = () => {
                         <h2 className="oswald-500 text-2xl uppercase text-white md:text-3xl">
                             More from Our <span className="text-[#D5FF00]">Community</span>
                         </h2>
-                        <p className="dm-sans-400 mt-2 text-gray-400">
+                        <p className="dm-sans-400 mt-2 text-gray-300">
                             Explore our year-round programs for emerging artists.
                         </p>
                     </div>
@@ -456,9 +456,9 @@ const BookingPage = () => {
                             </div>
                             <div className="flex-1">
                                 <h3 className="oswald-500 text-lg text-white group-hover:text-[#D5FF00]">Open Mic</h3>
-                                <p className="dm-sans-400 mt-1 text-sm text-gray-400">A stage for emerging voices. Perform, connect, and grow.</p>
+                                <p className="dm-sans-400 mt-1 text-sm text-gray-300">A stage for emerging voices. Perform, connect, and grow.</p>
                             </div>
-                            <ArrowRight className="h-5 w-5 text-gray-500 transition group-hover:translate-x-1 group-hover:text-[#D5FF00]" />
+                            <ArrowRight className="h-5 w-5 text-gray-300 transition group-hover:translate-x-1 group-hover:text-[#D5FF00]" />
                         </Link>
 
                         <Link
@@ -470,9 +470,9 @@ const BookingPage = () => {
                             </div>
                             <div className="flex-1">
                                 <h3 className="oswald-500 text-lg text-white group-hover:text-[#D5FF00]">Sofa Sessions</h3>
-                                <p className="dm-sans-400 mt-1 text-sm text-gray-400">Intimate live performances. Up close and personal.</p>
+                                <p className="dm-sans-400 mt-1 text-sm text-gray-300">Intimate live performances. Up close and personal.</p>
                             </div>
-                            <ArrowRight className="h-5 w-5 text-gray-500 transition group-hover:translate-x-1 group-hover:text-[#D5FF00]" />
+                            <ArrowRight className="h-5 w-5 text-gray-300 transition group-hover:translate-x-1 group-hover:text-[#D5FF00]" />
                         </Link>
                     </div>
                 </div>

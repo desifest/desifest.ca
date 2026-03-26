@@ -30,7 +30,7 @@ export default function ArtistDashboard() {
       <aside className="sticky top-0 hidden h-screen w-56 flex-shrink-0 flex-col border-r border-white/10 bg-[#0a0118] md:flex">
         <div className="p-4">
           <h2 className="oswald-500 text-xl uppercase text-white">Artist</h2>
-          <p className="mt-1 text-xs text-gray-500 truncate">{user?.email}</p>
+          <p className="mt-1 text-xs text-gray-300 truncate">{user?.email}</p>
         </div>
         <nav className="flex-1 space-y-1 px-2">
           {TABS.map(({ key, label, icon: Icon }) => (
@@ -38,7 +38,7 @@ export default function ArtistDashboard() {
               key={key}
               onClick={() => setActiveTab(key)}
               className={`flex w-full items-center gap-3 rounded px-3 py-2.5 text-left text-sm font-medium transition ${
-                activeTab === key ? 'bg-[#D5FF00]/10 text-[#D5FF00]' : 'text-gray-400 hover:bg-white/5 hover:text-white'
+                activeTab === key ? 'bg-[#D5FF00]/10 text-[#D5FF00]' : 'text-gray-300 hover:bg-white/5 hover:text-white'
               }`}
             >
               <Icon className="h-4 w-4" />
@@ -47,7 +47,7 @@ export default function ArtistDashboard() {
           ))}
         </nav>
         <div className="border-t border-white/10 p-3">
-          <button onClick={handleLogout} className="flex w-full items-center gap-2 rounded px-3 py-2 text-sm text-gray-400 hover:bg-white/5 hover:text-white">
+          <button onClick={handleLogout} className="flex w-full items-center gap-2 rounded px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
             <LogOut className="h-4 w-4" />
             Logout
           </button>
@@ -57,7 +57,7 @@ export default function ArtistDashboard() {
       <div className="flex w-full flex-col md:hidden">
         <div className="flex items-center justify-between border-b border-white/10 bg-[#0a0118] px-4 py-3">
           <h2 className="oswald-500 text-lg uppercase text-white">Artist Dashboard</h2>
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-400">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-300">
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Inbox className="h-5 w-5" />}
           </button>
         </div>
@@ -68,14 +68,14 @@ export default function ArtistDashboard() {
                 key={key}
                 onClick={() => { setActiveTab(key); setMobileMenuOpen(false) }}
                 className={`flex w-full items-center gap-3 rounded px-3 py-2 text-left text-sm font-medium ${
-                  activeTab === key ? 'bg-[#D5FF00]/10 text-[#D5FF00]' : 'text-gray-400'
+                  activeTab === key ? 'bg-[#D5FF00]/10 text-[#D5FF00]' : 'text-gray-300'
                 }`}
               >
                 <Icon className="h-4 w-4" />
                 {label}
               </button>
             ))}
-            <button onClick={handleLogout} className="flex w-full items-center gap-2 rounded px-3 py-2 text-sm text-gray-400">
+            <button onClick={handleLogout} className="flex w-full items-center gap-2 rounded px-3 py-2 text-sm text-gray-300">
               <LogOut className="h-4 w-4" /> Logout
             </button>
           </div>
@@ -86,7 +86,7 @@ export default function ArtistDashboard() {
               key={key}
               onClick={() => setActiveTab(key)}
               className={`flex shrink-0 items-center gap-1.5 px-3 py-2.5 text-xs font-medium transition ${
-                activeTab === key ? 'border-b-2 border-[#D5FF00] text-[#D5FF00]' : 'text-gray-500'
+                activeTab === key ? 'border-b-2 border-[#D5FF00] text-[#D5FF00]' : 'text-gray-300'
               }`}
             >
               <Icon className="h-3.5 w-3.5" />
@@ -200,7 +200,7 @@ function ProfileSection({ authFetch }) {
     setSaving(false)
   }
 
-  if (loading) return <div className="text-gray-400">Loading profile...</div>
+  if (loading) return <div className="text-gray-300">Loading profile...</div>
 
   return (
     <div className="max-w-2xl space-y-6">
@@ -220,8 +220,8 @@ function ProfileSection({ authFetch }) {
             <img src={form.pressPhotoPreview} alt="Preview" className="h-20 w-20 rounded-xl object-cover border border-white/10" />
           )}
           <div className="flex-1">
-            <input type="file" accept="image/*" onChange={handlePhotoChange} className="block w-full text-sm text-gray-400 file:mr-4 file:rounded-full file:border-0 file:bg-[#D5FF00] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-[#070707] hover:file:bg-[#c5ef00]" />
-            <p className="mt-1 text-xs text-gray-500">JPG, PNG or WebP. Under 5MB.</p>
+            <input type="file" accept="image/*" onChange={handlePhotoChange} className="block w-full text-sm text-gray-300 file:mr-4 file:rounded-full file:border-0 file:bg-[#D5FF00] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-[#070707] hover:file:bg-[#c5ef00]" />
+            <p className="mt-1 text-xs text-gray-300">JPG, PNG or WebP. Under 5MB.</p>
           </div>
         </div>
       </Field>
@@ -243,7 +243,7 @@ function ProfileSection({ authFetch }) {
         <div className="flex flex-wrap gap-2">
           {PERFORMANCE_TYPES.map(t => (
             <button key={t} type="button" onClick={() => toggleArrayItem('performanceTypes', t)}
-              className={`rounded-full border px-3 py-1 text-xs font-medium transition ${form.performanceTypes.includes(t) ? 'border-[#D5FF00]/40 bg-[#D5FF00]/10 text-[#D5FF00]' : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'}`}>
+              className={`rounded-full border px-3 py-1 text-xs font-medium transition ${form.performanceTypes.includes(t) ? 'border-[#D5FF00]/40 bg-[#D5FF00]/10 text-[#D5FF00]' : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'}`}>
               {t}
             </button>
           ))}
@@ -254,7 +254,7 @@ function ProfileSection({ authFetch }) {
         <div className="flex flex-wrap gap-2">
           {LANGUAGE_OPTIONS.map(l => (
             <button key={l} type="button" onClick={() => toggleArrayItem('languages', l)}
-              className={`rounded-full border px-3 py-1 text-xs font-medium transition ${form.languages.includes(l) ? 'border-[#D5FF00]/40 bg-[#D5FF00]/10 text-[#D5FF00]' : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'}`}>
+              className={`rounded-full border px-3 py-1 text-xs font-medium transition ${form.languages.includes(l) ? 'border-[#D5FF00]/40 bg-[#D5FF00]/10 text-[#D5FF00]' : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'}`}>
               {l}
             </button>
           ))}
@@ -327,13 +327,13 @@ function MediaSection({ authFetch }) {
     } catch {}
   }
 
-  if (loading) return <div className="text-gray-400">Loading media...</div>
+  if (loading) return <div className="text-gray-300">Loading media...</div>
 
   return (
     <div className="max-w-2xl space-y-6">
       <h2 className="oswald-500 text-2xl uppercase">Manage Media</h2>
 
-      <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+      <div className="flex flex-wrap gap-4 text-sm text-gray-300">
         <span>Photos: {photoCount}/6</span>
         <span>Videos: {videoCount}/3</span>
         <span>Music: {musicCount}/1</span>
@@ -360,7 +360,7 @@ function MediaSection({ authFetch }) {
         if (items.length === 0) return null
         return (
           <div key={type}>
-            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wider text-gray-400">{type}s</h3>
+            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wider text-gray-300">{type}s</h3>
             <div className="space-y-2">
               {items.map(item => (
                 <div key={item.id} className="flex items-center gap-3 rounded border border-white/10 bg-white/5 px-3 py-2">
@@ -411,21 +411,21 @@ function AvailabilitySection({ authFetch }) {
   const prevMonth = () => setCurrentMonth(new Date(year, month - 1, 1))
   const nextMonth = () => setCurrentMonth(new Date(year, month + 1, 1))
 
-  if (loading) return <div className="text-gray-400">Loading availability...</div>
+  if (loading) return <div className="text-gray-300">Loading availability...</div>
 
   return (
     <div className="max-w-lg space-y-6">
       <h2 className="oswald-500 text-2xl uppercase">Manage Availability</h2>
-      <p className="text-sm text-gray-400">Click on dates to block/unblock them. Blocked dates appear in red.</p>
+      <p className="text-sm text-gray-300">Click on dates to block/unblock them. Blocked dates appear in red.</p>
 
       <div className="rounded border border-white/10 bg-white/5 p-4">
         <div className="mb-4 flex items-center justify-between">
-          <button onClick={prevMonth} className="text-gray-400 hover:text-white"><ChevronLeft className="h-5 w-5" /></button>
+          <button onClick={prevMonth} className="text-gray-300 hover:text-white"><ChevronLeft className="h-5 w-5" /></button>
           <span className="text-sm font-semibold uppercase tracking-wider">{monthName}</span>
-          <button onClick={nextMonth} className="text-gray-400 hover:text-white"><ChevronRight className="h-5 w-5" /></button>
+          <button onClick={nextMonth} className="text-gray-300 hover:text-white"><ChevronRight className="h-5 w-5" /></button>
         </div>
 
-        <div className="grid grid-cols-7 gap-1 text-center text-xs text-gray-500 mb-2">
+        <div className="grid grid-cols-7 gap-1 text-center text-xs text-gray-300 mb-2">
           {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => <div key={d}>{d}</div>)}
         </div>
 
@@ -454,7 +454,7 @@ function AvailabilitySection({ authFetch }) {
         </div>
       </div>
 
-      <p className="text-xs text-gray-500">{blockedDates.length} date(s) currently blocked</p>
+      <p className="text-xs text-gray-300">{blockedDates.length} date(s) currently blocked</p>
     </div>
   )
 }
@@ -481,27 +481,27 @@ function BookingsSection({ authFetch }) {
   }
 
   const statusColor = (s) => {
-    const colors = { pending: 'text-yellow-400 bg-yellow-500/10', accepted: 'text-green-400 bg-green-500/10', declined: 'text-red-400 bg-red-500/10', countered: 'text-blue-400 bg-blue-500/10', confirmed: 'text-green-400 bg-green-500/10', cancelled: 'text-gray-400 bg-gray-500/10', completed: 'text-purple-400 bg-purple-500/10' }
-    return colors[s] || 'text-gray-400 bg-gray-500/10'
+    const colors = { pending: 'text-yellow-400 bg-yellow-500/10', accepted: 'text-green-400 bg-green-500/10', declined: 'text-red-400 bg-red-500/10', countered: 'text-blue-400 bg-blue-500/10', confirmed: 'text-green-400 bg-green-500/10', cancelled: 'text-gray-300 bg-gray-500/10', completed: 'text-purple-400 bg-purple-500/10' }
+    return colors[s] || 'text-gray-300 bg-gray-500/10'
   }
 
-  if (loading) return <div className="text-gray-400">Loading bookings...</div>
+  if (loading) return <div className="text-gray-300">Loading bookings...</div>
 
   return (
     <div className="max-w-3xl space-y-4">
       <h2 className="oswald-500 text-2xl uppercase">Incoming Bookings</h2>
       {bookings.length === 0 ? (
-        <p className="text-gray-500">No booking requests yet.</p>
+        <p className="text-gray-300">No booking requests yet.</p>
       ) : (
         bookings.map(b => (
           <div key={b.id} className="rounded border border-white/10 bg-white/5 p-4 space-y-3">
             <div className="flex flex-wrap items-start justify-between gap-2">
               <div>
                 <h3 className="font-semibold">{b.event_name}</h3>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-300">
                   {b.client_first_name} {b.client_last_name} &middot; {new Date(b.event_date).toLocaleDateString()}
                 </p>
-                {b.event_location && <p className="text-xs text-gray-500">{b.event_location}</p>}
+                {b.event_location && <p className="text-xs text-gray-300">{b.event_location}</p>}
                 {b.event_description && <p className="mt-1 text-sm text-gray-300">{b.event_description}</p>}
               </div>
               <div className="flex items-center gap-2">
@@ -542,18 +542,18 @@ function CounterOfferForm({ onSubmit, onCancel }) {
     <div className="rounded border border-blue-500/20 bg-blue-500/5 p-3 space-y-3">
       <div className="grid gap-3 sm:grid-cols-2">
         <div>
-          <label className="mb-1 block text-xs text-gray-400">Counter Price ($)</label>
+          <label className="mb-1 block text-xs text-gray-300">Counter Price ($)</label>
           <input type="number" value={price} onChange={e => setPrice(e.target.value)} placeholder="0.00" className="input-field" />
         </div>
         <div>
-          <label className="mb-1 block text-xs text-gray-400">Counter Date</label>
+          <label className="mb-1 block text-xs text-gray-300">Counter Date</label>
           <input type="date" value={date} onChange={e => setDate(e.target.value)} className="input-field" />
         </div>
       </div>
       <div className="flex gap-2">
         <button onClick={() => onSubmit({ counterPrice: price || undefined, counterDate: date || undefined })}
           className="rounded bg-blue-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-blue-700">Send Counter</button>
-        <button onClick={onCancel} className="rounded border border-white/20 px-3 py-1.5 text-xs text-gray-400 hover:bg-white/5">Cancel</button>
+        <button onClick={onCancel} className="rounded border border-white/20 px-3 py-1.5 text-xs text-gray-300 hover:bg-white/5">Cancel</button>
       </div>
     </div>
   )
@@ -567,7 +567,7 @@ function EarningsSection({ authFetch }) {
     authFetch('/api/dashboard/artist/earnings').then(r => r.json()).then(d => { setEarnings(d); setLoading(false) }).catch(() => setLoading(false))
   }, [authFetch])
 
-  if (loading) return <div className="text-gray-400">Loading earnings...</div>
+  if (loading) return <div className="text-gray-300">Loading earnings...</div>
 
   return (
     <div className="max-w-lg space-y-6">
@@ -580,7 +580,7 @@ function EarningsSection({ authFetch }) {
           <StatCard label="Net Earnings (85%)" value={`$${Number(earnings.net_earnings || 0).toLocaleString()}`} accent />
         </div>
       )}
-      <p className="text-xs text-gray-500">Net earnings reflect an estimated 15% platform commission.</p>
+      <p className="text-xs text-gray-300">Net earnings reflect an estimated 15% platform commission.</p>
     </div>
   )
 }
@@ -588,7 +588,7 @@ function EarningsSection({ authFetch }) {
 function StatCard({ label, value, accent }) {
   return (
     <div className="rounded border border-white/10 bg-white/5 p-4">
-      <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-gray-300">{label}</p>
       <p className={`mt-1 text-2xl font-bold ${accent ? 'text-[#D5FF00]' : 'text-white'}`}>{value}</p>
     </div>
   )
@@ -597,7 +597,7 @@ function StatCard({ label, value, accent }) {
 function Field({ label, children }) {
   return (
     <div>
-      <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">{label}</label>
+      <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">{label}</label>
       {children}
     </div>
   )

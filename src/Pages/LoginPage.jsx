@@ -28,7 +28,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
           <Link to="/" className="oswald-500 text-4xl uppercase text-white">DESIFEST</Link>
-          <p className="mt-2 text-gray-400">Sign in to your account</p>
+          <p className="mt-2 text-gray-300">Sign in to your account</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -39,7 +39,7 @@ export default function LoginPage() {
           )}
 
           <div>
-            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Email</label>
+            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Email</label>
             <input
               type="email"
               value={email}
@@ -51,7 +51,7 @@ export default function LoginPage() {
           </div>
 
           <div>
-            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Password</label>
+            <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Password</label>
             <input
               type="password"
               value={password}
@@ -71,7 +71,7 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-gray-400">
+        <p className="mt-6 text-center text-sm text-gray-300">
           Don't have an account?{' '}
           <Link to="/signup" className="text-[#D5FF00] hover:underline">Create one</Link>
         </p>

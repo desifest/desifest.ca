@@ -97,14 +97,14 @@ export default function ArtistDirectoryPage() {
                         <h1 className="oswald-500 text-4xl uppercase md:text-5xl lg:text-6xl">
                             Artist <span className="text-[#D5FF00]">Directory</span>
                         </h1>
-                        <p className="dm-sans-400 mt-3 max-w-2xl text-base text-gray-400 md:text-lg">
+                        <p className="dm-sans-400 mt-3 max-w-2xl text-base text-gray-300 md:text-lg">
                             Discover talented artists from the DESIFEST network. Find the perfect performer for your next event.
                         </p>
                     </div>
 
                     <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                         <div className="relative max-w-md flex-1">
-                            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
+                            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-300" />
                             <input
                                 type="text"
                                 value={search}
@@ -113,7 +113,7 @@ export default function ArtistDirectoryPage() {
                                 className="w-full rounded-xl border border-white/15 bg-white/5 py-3 pl-12 pr-10 text-white placeholder-gray-500 outline-none transition focus:border-[#D5FF00]/50 focus:ring-1 focus:ring-[#D5FF00]/30"
                             />
                             {search && (
-                                <button onClick={() => setSearch('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                                <button onClick={() => setSearch('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-300 hover:text-white">
                                     <X className="h-5 w-5" />
                                 </button>
                             )}
@@ -143,7 +143,7 @@ export default function ArtistDirectoryPage() {
                                         <option key={opt.value} value={opt.value} className="bg-[#1a0a2e]">{opt.label}</option>
                                     ))}
                                 </select>
-                                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+                                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-300" />
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@ export default function ArtistDirectoryPage() {
                         <div className="mb-8 rounded-xl border border-white/10 bg-white/5 p-4 md:p-6">
                             <div className="flex flex-wrap gap-4">
                                 <div className="min-w-[160px] flex-1">
-                                    <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-gray-400">Genre</label>
+                                    <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-gray-300">Genre</label>
                                     <select
                                         value={selectedGenre}
                                         onChange={e => setSelectedGenre(e.target.value)}
@@ -165,7 +165,7 @@ export default function ArtistDirectoryPage() {
                                     </select>
                                 </div>
                                 <div className="min-w-[160px] flex-1">
-                                    <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-gray-400">City</label>
+                                    <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-gray-300">City</label>
                                     <select
                                         value={selectedCity}
                                         onChange={e => setSelectedCity(e.target.value)}
@@ -201,13 +201,13 @@ export default function ArtistDirectoryPage() {
                         <div className="flex items-center justify-center py-20">
                             <div className="flex flex-col items-center gap-4">
                                 <div className="h-10 w-10 animate-spin rounded-full border-2 border-[#D5FF00] border-t-transparent" />
-                                <p className="text-gray-400">Loading artists...</p>
+                                <p className="text-gray-300">Loading artists...</p>
                             </div>
                         </div>
                     ) : paginatedArtists.length === 0 ? (
                         <div className="flex flex-col items-center justify-center py-20 text-center">
-                            <p className="oswald-500 text-2xl text-gray-400">No artists found</p>
-                            <p className="mt-2 text-gray-500">Try adjusting your search or filters</p>
+                            <p className="oswald-500 text-2xl text-gray-300">No artists found</p>
+                            <p className="mt-2 text-gray-300">Try adjusting your search or filters</p>
                             {(search || activeFilterCount > 0) && (
                                 <button onClick={clearFilters} className="mt-6 rounded-full border border-[#D5FF00] px-6 py-2 text-sm text-[#D5FF00] transition hover:bg-[#D5FF00] hover:text-[#100422]">
                                     Clear filters
@@ -216,7 +216,7 @@ export default function ArtistDirectoryPage() {
                         </div>
                     ) : (
                         <>
-                            <div className="mb-4 text-sm text-gray-400">
+                            <div className="mb-4 text-sm text-gray-300">
                                 {artists.length} artist{artists.length !== 1 ? 's' : ''} found
                             </div>
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

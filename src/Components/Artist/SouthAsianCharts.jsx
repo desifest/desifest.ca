@@ -84,14 +84,14 @@ const SouthAsianCharts = () => {
 
                             <div className="w-full text-center lg:text-left">
                                 <h2 className="oswald-500 text-xl text-white">{playlistTitle}</h2>
-                                <p className="dm-sans-400 mt-1 text-xs text-gray-400">
+                                <p className="dm-sans-400 mt-1 text-xs text-gray-300">
                                     {tracks.length} videos &middot; Updated today
                                 </p>
                             </div>
 
                             <div className="flex w-full items-center gap-2">
                                 <button
-                                    className="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition hover:text-white"
+                                    className="flex h-8 w-8 items-center justify-center rounded-full text-gray-300 transition hover:text-white"
                                     title="Save"
                                 >
                                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -99,7 +99,7 @@ const SouthAsianCharts = () => {
                                     </svg>
                                 </button>
                                 <button
-                                    className="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition hover:text-white"
+                                    className="flex h-8 w-8 items-center justify-center rounded-full text-gray-300 transition hover:text-white"
                                     title="Share"
                                 >
                                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -107,7 +107,7 @@ const SouthAsianCharts = () => {
                                     </svg>
                                 </button>
                                 <button
-                                    className="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition hover:text-white"
+                                    className="flex h-8 w-8 items-center justify-center rounded-full text-gray-300 transition hover:text-white"
                                     title="Download"
                                 >
                                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -141,7 +141,7 @@ const SouthAsianCharts = () => {
                                 </a>
                             </div>
 
-                            <p className="dm-sans-400 text-xs leading-relaxed text-gray-500">
+                            <p className="dm-sans-400 text-xs leading-relaxed text-gray-300">
                                 Today's ranking of the hottest songs on YouTube.
                             </p>
                         </div>
@@ -164,7 +164,7 @@ const SouthAsianCharts = () => {
                                     onClick={() => setActiveVideo(track.videoId === activeVideo ? null : track.videoId)}
                                     className={`flex w-full items-center gap-4 border-b border-gray-100 px-4 py-3 text-left transition hover:bg-gray-50 ${activeVideo === track.videoId ? 'bg-gray-100' : ''}`}
                                 >
-                                    <span className="dm-sans-400 w-6 shrink-0 text-center text-sm text-gray-400">
+                                    <span className="dm-sans-400 w-6 shrink-0 text-center text-sm text-gray-300">
                                         {track.position}
                                     </span>
                                     <div className="relative h-16 w-28 shrink-0 overflow-hidden rounded">
@@ -183,7 +183,7 @@ const SouthAsianCharts = () => {
                                         <p className="dm-sans-700 truncate text-sm text-black">
                                             {track.title}
                                         </p>
-                                        <p className="dm-sans-400 truncate text-xs text-gray-500">
+                                        <p className="dm-sans-400 truncate text-xs text-gray-300">
                                             {track.artist}
                                         </p>
                                     </div>

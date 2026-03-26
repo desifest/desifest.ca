@@ -52,7 +52,7 @@ const BlogPost = () => {
     if (loading) {
         return (
             <main className="flex min-h-screen items-center justify-center bg-[#100422] text-white">
-                <p className="text-gray-400">Loading...</p>
+                <p className="text-gray-300">Loading...</p>
             </main>
         )
     }
@@ -119,7 +119,7 @@ const BlogPost = () => {
             </div>
 
             <article className="relative mx-auto w-full max-w-5xl">
-                <Link to="/media" className="mb-6 inline-flex items-center gap-1 text-sm text-gray-400 transition hover:text-[#D5FF00]">
+                <Link to="/media" className="mb-6 inline-flex items-center gap-1 text-sm text-gray-300 transition hover:text-[#D5FF00]">
                     <ChevronLeft className="h-4 w-4" />
                     Back to Blogs
                 </Link>

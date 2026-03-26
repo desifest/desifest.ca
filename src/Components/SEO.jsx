@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-const DEFAULT_IMAGE = 'https://desifest.ca/og-image.png'
+const DEFAULT_IMAGE = 'https://www.desifest.ca/og-image.png'
 
 export default function SEO({ title, description, image, type }) {
     const location = useLocation()
@@ -10,7 +10,7 @@ export default function SEO({ title, description, image, type }) {
         : "DESIFEST 2026 | Toronto's Largest South Asian Music & Arts Festival | June 18-20"
     const desc = description || "Join DESIFEST 2026, Canada's largest South Asian music and arts festival. Celebrating 20 years of uniting generations, genres, and voices on one iconic stage. June 18-20 at Sankofa Square, Toronto."
     const ogImage = image || DEFAULT_IMAGE
-    const canonicalUrl = `https://desifest.ca${location.pathname}`
+    const canonicalUrl = `https://www.desifest.ca${location.pathname}`
     const ogType = type || 'website'
 
     useEffect(() => {

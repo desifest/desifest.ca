@@ -113,7 +113,7 @@ export default function AdminPage() {
                             className={`flex w-full items-center gap-3 rounded px-3 py-2.5 text-left text-sm font-medium transition ${
                                 activeSection === key
                                     ? 'bg-[#D5FF00]/10 text-[#D5FF00]'
-                                    : 'text-gray-400 hover:bg-white/5 hover:text-white'
+                                    : 'text-gray-300 hover:bg-white/5 hover:text-white'
                             }`}
                         >
                             <Icon className="h-4 w-4" />
@@ -122,7 +122,7 @@ export default function AdminPage() {
                     ))}
                 </nav>
                 <div className="border-t border-white/10 p-3">
-                    <button onClick={handleLogout} className="w-full rounded px-3 py-2 text-sm text-gray-400 hover:bg-white/5 hover:text-white">
+                    <button onClick={handleLogout} className="w-full rounded px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
                         Logout
                     </button>
                 </div>
@@ -374,7 +374,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
                     className={`flex items-center gap-2 rounded border px-3 py-2 text-sm font-medium transition ${
                         profileApproved
                             ? 'border-green-500/40 bg-green-500/10 text-green-400'
-                            : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'
+                            : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'
                     }`}
                 >
                     <Shield className="h-4 w-4" />
@@ -386,7 +386,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
                     className={`flex items-center gap-2 rounded border px-3 py-2 text-sm font-medium transition ${
                         featured
                             ? 'border-yellow-500/40 bg-yellow-500/10 text-yellow-400'
-                            : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'
+                            : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'
                     }`}
                 >
                     <Star className={`h-4 w-4 ${featured ? 'fill-yellow-400' : ''}`} />
@@ -398,7 +398,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
                     className={`flex items-center gap-2 rounded border px-3 py-2 text-sm font-medium transition ${
                         alumni
                             ? 'border-purple-500/40 bg-purple-500/10 text-purple-400'
-                            : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'
+                            : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'
                     }`}
                 >
                     <Award className="h-4 w-4" />
@@ -407,7 +407,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
             </div>
 
             <div>
-                <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Bio</label>
+                <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Bio</label>
                 <textarea
                     value={bio}
                     onChange={e => setBio(e.target.value)}
@@ -418,7 +418,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
             </div>
 
             <div>
-                <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Press Photo</label>
+                <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Press Photo</label>
                 <div className="flex items-center gap-3">
                     {pressPhotoPreview && (
                         <img src={pressPhotoPreview} alt="Press photo" className="h-16 w-16 rounded-full border border-white/10 object-cover" />
@@ -432,7 +432,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
             </div>
 
             <div>
-                <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Looking For</label>
+                <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Looking For</label>
                 <div className="flex flex-wrap gap-2">
                     {LOOKING_FOR_OPTIONS.map(tag => (
                         <button
@@ -442,7 +442,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
                             className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
                                 lookingFor.includes(tag)
                                     ? 'border-[#D5FF00]/40 bg-[#D5FF00]/10 text-[#D5FF00]'
-                                    : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'
+                                    : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'
                             }`}
                         >
                             {tag}
@@ -458,7 +458,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
                     className={`flex items-center gap-2 rounded border px-3 py-2 text-sm font-medium transition ${
                         availableForGigs
                             ? 'border-blue-500/40 bg-blue-500/10 text-blue-400'
-                            : 'border-white/20 bg-white/5 text-gray-400 hover:bg-white/10'
+                            : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'
                     }`}
                 >
                     <Music className="h-4 w-4" />
@@ -467,9 +467,9 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
             </div>
 
             <div>
-                <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">Profile URL Slug</label>
+                <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-gray-300">Profile URL Slug</label>
                 <div className="flex items-center gap-2">
-                    <span className="text-sm text-gray-500">/artists/</span>
+                    <span className="text-sm text-gray-300">/artists/</span>
                     <input
                         type="text"
                         value={slug}
@@ -484,7 +484,7 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
                     )}
                 </div>
                 {slug && !profileApproved && (
-                    <p className="mt-1 text-xs text-gray-500">Profile not visible until approved</p>
+                    <p className="mt-1 text-xs text-gray-300">Profile not visible until approved</p>
                 )}
             </div>
 
@@ -536,8 +536,8 @@ function ArtistProfilePanel({ row, token, onUpdate, onDelete }) {
 
             {showRequestInfo && (
                 <div className="mt-3 rounded border border-white/10 bg-white/[0.02] p-4 space-y-3">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">Request More Information via Email</p>
-                    <p className="text-xs text-gray-500">This will send an email to {row.email} asking for additional information.</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-300">Request More Information via Email</p>
+                    <p className="text-xs text-gray-300">This will send an email to {row.email} asking for additional information.</p>
                     <textarea
                         value={requestInfoMsg}
                         onChange={e => setRequestInfoMsg(e.target.value)}
@@ -580,7 +580,7 @@ function SubmissionDetailModal({ row, tab, onClose, token, onProfileUpdate, onDe
                             <span className="rounded bg-yellow-500/20 px-2 py-0.5 text-xs font-medium text-yellow-400">Featured</span>
                         )}
                     </div>
-                    <button onClick={onClose} className="text-gray-400 hover:text-white"><X className="h-5 w-5" /></button>
+                    <button onClick={onClose} className="text-gray-300 hover:text-white"><X className="h-5 w-5" /></button>
                 </div>
                 <div className="px-6 py-4 space-y-1">
                     {fields.map(f => {
@@ -692,7 +692,7 @@ function SubmissionsSection({ token, activeTab, setActiveTab, onUnauthorized }) 
                         className={`ml-4 flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition ${
                             showShortlistedOnly
                                 ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/40'
-                                : 'border border-white/20 text-gray-400 hover:bg-white/10 hover:text-white'
+                                : 'border border-white/20 text-gray-300 hover:bg-white/10 hover:text-white'
                         }`}
                     >
                         <Star className={`h-3.5 w-3.5 ${showShortlistedOnly ? 'fill-yellow-400' : ''}`} />
@@ -701,9 +701,9 @@ function SubmissionsSection({ token, activeTab, setActiveTab, onUnauthorized }) 
                 )}
             </div>
 
-            {loading && <p className="text-gray-400">Loading...</p>}
+            {loading && <p className="text-gray-300">Loading...</p>}
             {error && error !== 'Unauthorized' && <p className="text-red-400">{error}</p>}
-            {!loading && !error && data?.length === 0 && <p className="text-gray-400">No submissions yet.</p>}
+            {!loading && !error && data?.length === 0 && <p className="text-gray-300">No submissions yet.</p>}
             {!loading && !error && displayData?.length > 0 && (
                 <div className="overflow-x-auto">
                     <table className="w-full border-collapse text-sm">
@@ -750,14 +750,14 @@ function SubmissionsSection({ token, activeTab, setActiveTab, onUnauthorized }) 
                             })}
                         </tbody>
                     </table>
-                    <p className="mt-4 text-sm text-gray-500">
+                    <p className="mt-4 text-sm text-gray-300">
                         {showShortlistedOnly ? `Showing ${displayData.length} shortlisted` : `Total: ${data.length} ${data.length === 1 ? 'entry' : 'entries'}`}
                         {isArtists && !showShortlistedOnly && shortlistedCount > 0 ? ` (${shortlistedCount} shortlisted)` : ''}
                     </p>
                 </div>
             )}
             {!loading && !error && showShortlistedOnly && displayData?.length === 0 && (
-                <p className="text-gray-400">No shortlisted artists yet. Click the star icon next to an artist to shortlist them.</p>
+                <p className="text-gray-300">No shortlisted artists yet. Click the star icon next to an artist to shortlist them.</p>
             )}
 
             {selectedRow && <SubmissionDetailModal row={selectedRow} tab={activeTab} onClose={() => setSelectedRow(null)} token={token} onProfileUpdate={(updatedData) => {
@@ -982,7 +982,7 @@ function QueueSection({ token, onUnauthorized }) {
 
     const statusBadge = (status) => {
         const styles = {
-            queued: 'bg-gray-500/20 text-gray-400',
+            queued: 'bg-gray-500/20 text-gray-300',
             writing: 'bg-yellow-500/20 text-yellow-400',
             published: 'bg-green-500/20 text-green-400',
             failed: 'bg-red-500/20 text-red-400',
@@ -1008,7 +1008,7 @@ function QueueSection({ token, onUnauthorized }) {
         <>
             <div className="mb-6">
                 <h1 className="oswald-500 text-3xl uppercase">Content Queue</h1>
-                <p className="mt-1 text-sm text-gray-400">Brainstorm ideas, add them to the queue, and they'll be auto-written, imaged, and published daily.</p>
+                <p className="mt-1 text-sm text-gray-300">Brainstorm ideas, add them to the queue, and they'll be auto-written, imaged, and published daily.</p>
             </div>
 
             {queuedCount > 0 && (
@@ -1016,9 +1016,9 @@ function QueueSection({ token, onUnauthorized }) {
                     <Calendar className="h-5 w-5 text-[#D5FF00]" />
                     <div className="text-sm">
                         <span className="font-medium text-[#D5FF00]">{queuedCount} article{queuedCount !== 1 ? 's' : ''}</span>
-                        <span className="text-gray-400"> in queue</span>
+                        <span className="text-gray-300"> in queue</span>
                         {nextScheduled && (
-                            <span className="text-gray-400"> · Next publish: <span className="text-white">{new Date(nextScheduled.scheduled_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span></span>
+                            <span className="text-gray-300"> · Next publish: <span className="text-white">{new Date(nextScheduled.scheduled_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span></span>
                         )}
                     </div>
                 </div>
@@ -1049,7 +1049,7 @@ function QueueSection({ token, onUnauthorized }) {
 
                 <button
                     onClick={() => setShowCustom(!showCustom)}
-                    className="mt-3 flex items-center gap-2 text-xs text-gray-400 hover:text-[#D5FF00] transition"
+                    className="mt-3 flex items-center gap-2 text-xs text-gray-300 hover:text-[#D5FF00] transition"
                 >
                     <Plus className="h-3 w-3" />
                     {showCustom ? 'Hide custom idea form' : 'Or add your own idea directly'}
@@ -1079,7 +1079,7 @@ function QueueSection({ token, onUnauthorized }) {
 
                 {ideas.length > 0 && (
                     <div className="mt-4 space-y-2">
-                        <p className="text-xs text-gray-500">Select ideas to add to the queue:</p>
+                        <p className="text-xs text-gray-300">Select ideas to add to the queue:</p>
                         {ideas.map((idea, i) => (
                             <button
                                 key={i}
@@ -1096,8 +1096,8 @@ function QueueSection({ token, onUnauthorized }) {
                                     </div>
                                     <div>
                                         <h3 className="text-sm font-medium text-white">{idea.title}</h3>
-                                        <p className="mt-0.5 text-xs text-gray-400">{idea.angle}</p>
-                                        {idea.keyword && <span className="mt-1 inline-block rounded bg-white/10 px-2 py-0.5 text-xs text-gray-500">{idea.keyword}</span>}
+                                        <p className="mt-0.5 text-xs text-gray-300">{idea.angle}</p>
+                                        {idea.keyword && <span className="mt-1 inline-block rounded bg-white/10 px-2 py-0.5 text-xs text-gray-300">{idea.keyword}</span>}
                                     </div>
                                 </div>
                             </button>
@@ -1114,14 +1114,14 @@ function QueueSection({ token, onUnauthorized }) {
                 )}
             </div>
 
-            {loading && <p className="text-gray-400">Loading queue...</p>}
+            {loading && <p className="text-gray-300">Loading queue...</p>}
             {!loading && !error && queue?.length === 0 && (
-                <p className="text-gray-500">Queue is empty. Brainstorm some ideas above to get started.</p>
+                <p className="text-gray-300">Queue is empty. Brainstorm some ideas above to get started.</p>
             )}
 
             {!loading && !error && queue?.length > 0 && (
                 <div className="space-y-2">
-                    <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400">Pipeline</h2>
+                    <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-300">Pipeline</h2>
                     {queue.map(item => (
                         <div key={item.id} className={`flex cursor-pointer items-center justify-between rounded border p-4 transition hover:border-white/20 ${
                             item.status === 'published' ? 'border-green-500/20 bg-green-500/5' :
@@ -1134,7 +1134,7 @@ function QueueSection({ token, onUnauthorized }) {
                                     <h3 className="text-sm font-medium text-white">{item.title}</h3>
                                     {statusBadge(item.status)}
                                 </div>
-                                <div className="mt-1 flex items-center gap-3 text-xs text-gray-500">
+                                <div className="mt-1 flex items-center gap-3 text-xs text-gray-300">
                                     <span>{new Date(item.scheduled_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                                     {item.keyword && <span className="rounded bg-white/10 px-1.5 py-0.5">{item.keyword}</span>}
                                     {item.generated_content && <span className="text-blue-400">Has preview</span>}
@@ -1147,14 +1147,14 @@ function QueueSection({ token, onUnauthorized }) {
                                         <div className="flex flex-col">
                                             <button
                                                 onClick={() => handleReorder(item.id, 'up')}
-                                                className="rounded p-0.5 text-gray-500 hover:bg-white/10 hover:text-white"
+                                                className="rounded p-0.5 text-gray-300 hover:bg-white/10 hover:text-white"
                                                 title="Move up"
                                             >
                                                 <ChevronUp className="h-4 w-4" />
                                             </button>
                                             <button
                                                 onClick={() => handleReorder(item.id, 'down')}
-                                                className="rounded p-0.5 text-gray-500 hover:bg-white/10 hover:text-white"
+                                                className="rounded p-0.5 text-gray-300 hover:bg-white/10 hover:text-white"
                                                 title="Move down"
                                             >
                                                 <ChevronDown className="h-4 w-4" />
@@ -1173,7 +1173,7 @@ function QueueSection({ token, onUnauthorized }) {
                                 {item.status !== 'writing' && (
                                     <button
                                         onClick={() => handleDelete(item.id)}
-                                        className="rounded p-1.5 text-gray-500 hover:bg-red-500/10 hover:text-red-400"
+                                        className="rounded p-1.5 text-gray-300 hover:bg-red-500/10 hover:text-red-400"
                                     >
                                         <Trash2 className="h-4 w-4" />
                                     </button>
@@ -1218,7 +1218,7 @@ function QueueSection({ token, onUnauthorized }) {
                                             <Eye className="h-3 w-3" /> View Post
                                         </a>
                                     )}
-                                    <button onClick={closeModal} className="rounded p-2 text-gray-400 hover:bg-white/10 hover:text-white">
+                                    <button onClick={closeModal} className="rounded p-2 text-gray-300 hover:bg-white/10 hover:text-white">
                                         <X className="h-5 w-5" />
                                     </button>
                                 </div>
@@ -1227,9 +1227,9 @@ function QueueSection({ token, onUnauthorized }) {
                             <div className="flex-1 space-y-6 overflow-y-auto p-6">
                                 {isEditable && (
                                     <div className="space-y-4 rounded border border-white/10 bg-white/[0.02] p-5">
-                                        <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400">Article Setup</h3>
+                                        <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-300">Article Setup</h3>
                                         <div>
-                                            <label className="mb-1 block text-xs text-gray-500">Title</label>
+                                            <label className="mb-1 block text-xs text-gray-300">Title</label>
                                             <input
                                                 type="text"
                                                 value={editFields.title}
@@ -1238,7 +1238,7 @@ function QueueSection({ token, onUnauthorized }) {
                                             />
                                         </div>
                                         <div>
-                                            <label className="mb-1 block text-xs text-gray-500">Description / Angle</label>
+                                            <label className="mb-1 block text-xs text-gray-300">Description / Angle</label>
                                             <textarea
                                                 value={editFields.description}
                                                 onChange={e => setEditFields(f => ({ ...f, description: e.target.value }))}
@@ -1247,7 +1247,7 @@ function QueueSection({ token, onUnauthorized }) {
                                             />
                                         </div>
                                         <div>
-                                            <label className="mb-1 block text-xs text-gray-500">Primary Keyword</label>
+                                            <label className="mb-1 block text-xs text-gray-300">Primary Keyword</label>
                                             <input
                                                 type="text"
                                                 value={editFields.keyword}
@@ -1285,26 +1285,26 @@ function QueueSection({ token, onUnauthorized }) {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-4">
                                             <h3 className="text-xs font-semibold uppercase tracking-wider text-[#D5FF00]">Article Preview</h3>
-                                            {content.primary_keyword && <span className="rounded bg-white/10 px-2 py-0.5 text-xs text-gray-500">{content.primary_keyword}</span>}
+                                            {content.primary_keyword && <span className="rounded bg-white/10 px-2 py-0.5 text-xs text-gray-300">{content.primary_keyword}</span>}
                                             {content.secondary_keywords?.map((kw, i) => (
-                                                <span key={i} className="rounded bg-white/10 px-2 py-0.5 text-xs text-gray-500">{kw}</span>
+                                                <span key={i} className="rounded bg-white/10 px-2 py-0.5 text-xs text-gray-300">{kw}</span>
                                             ))}
                                         </div>
 
                                         <div className="grid grid-cols-2 gap-4 rounded border border-white/10 bg-white/[0.02] p-4">
                                             <div>
-                                                <p className="text-xs text-gray-500">SEO Title</p>
+                                                <p className="text-xs text-gray-300">SEO Title</p>
                                                 <p className="mt-1 text-sm font-medium text-white">{content.seo_title}</p>
                                             </div>
                                             <div>
-                                                <p className="text-xs text-gray-500">Meta Description</p>
+                                                <p className="text-xs text-gray-300">Meta Description</p>
                                                 <p className="mt-1 text-sm text-gray-300">{content.meta_description}</p>
                                             </div>
                                         </div>
 
                                         {isEditable ? (
                                             <div className="flex flex-1 flex-col">
-                                                <label className="mb-2 block text-xs text-gray-500">Article Content</label>
+                                                <label className="mb-2 block text-xs text-gray-300">Article Content</label>
                                                 <textarea
                                                     value={editingContent[modalItem.id] || ''}
                                                     onChange={e => setEditingContent(prev => ({ ...prev, [modalItem.id]: e.target.value }))}
@@ -1330,7 +1330,7 @@ function QueueSection({ token, onUnauthorized }) {
                                 )}
 
                                 {modalItem.status === 'published' && !content && (
-                                    <p className="text-sm text-gray-500">This article has been published. View it on the blog or edit it in the Blogs section.</p>
+                                    <p className="text-sm text-gray-300">This article has been published. View it on the blog or edit it in the Blogs section.</p>
                                 )}
                             </div>
                         </div>
@@ -1461,27 +1461,27 @@ function AIWriter({ token, onUseContent }) {
                     <h2 className="oswald-500 text-2xl uppercase text-white">AI Blog Writer</h2>
                 </div>
                 {step !== 'topic' && (
-                    <button onClick={handleReset} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white">
+                    <button onClick={handleReset} className="flex items-center gap-2 text-sm text-gray-300 hover:text-white">
                         <RotateCcw className="h-4 w-4" /> Start Over
                     </button>
                 )}
             </div>
 
-            <div className="flex items-center gap-2 text-xs text-gray-500">
-                <span className={step === 'topic' ? 'text-[#D5FF00]' : 'text-gray-400'}>1. Topic</span>
+            <div className="flex items-center gap-2 text-xs text-gray-300">
+                <span className={step === 'topic' ? 'text-[#D5FF00]' : 'text-gray-300'}>1. Topic</span>
                 <ArrowRight className="h-3 w-3" />
-                <span className={step === 'pick' ? 'text-[#D5FF00]' : 'text-gray-400'}>2. Pick Idea</span>
+                <span className={step === 'pick' ? 'text-[#D5FF00]' : 'text-gray-300'}>2. Pick Idea</span>
                 <ArrowRight className="h-3 w-3" />
-                <span className={step === 'writing' || step === 'review' ? 'text-[#D5FF00]' : 'text-gray-400'}>3. Write</span>
+                <span className={step === 'writing' || step === 'review' ? 'text-[#D5FF00]' : 'text-gray-300'}>3. Write</span>
                 <ArrowRight className="h-3 w-3" />
-                <span className={step === 'review' && generatedImageUrl ? 'text-[#D5FF00]' : 'text-gray-400'}>4. Image</span>
+                <span className={step === 'review' && generatedImageUrl ? 'text-[#D5FF00]' : 'text-gray-300'}>4. Image</span>
             </div>
 
             {error && <p className="rounded border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm text-red-400">{error}</p>}
 
             {step === 'topic' && (
                 <div className="space-y-4">
-                    <p className="text-sm text-gray-400">Enter a topic or theme and AI will brainstorm 5 editorial article ideas for you.</p>
+                    <p className="text-sm text-gray-300">Enter a topic or theme and AI will brainstorm 5 editorial article ideas for you.</p>
                     <input
                         type="text"
                         value={topic}
@@ -1503,7 +1503,7 @@ function AIWriter({ token, onUseContent }) {
 
             {step === 'pick' && (
                 <div className="space-y-4">
-                    <p className="text-sm text-gray-400">Pick an idea to develop into a full editorial article:</p>
+                    <p className="text-sm text-gray-300">Pick an idea to develop into a full editorial article:</p>
                     <div className="space-y-3">
                         {ideas.map((idea, i) => (
                             <button
@@ -1514,13 +1514,13 @@ function AIWriter({ token, onUseContent }) {
                             >
                                 <h3 className="font-medium text-white group-hover:text-[#D5FF00]">{idea.title}</h3>
                                 <p className="mt-1 text-sm italic text-[#D5FF00]/70">{idea.angle}</p>
-                                <p className="mt-2 text-sm leading-relaxed text-gray-400">{idea.description}</p>
+                                <p className="mt-2 text-sm leading-relaxed text-gray-300">{idea.description}</p>
                                 {idea.keyword && (
-                                    <span className="mt-2 inline-block rounded bg-white/10 px-2 py-0.5 text-xs text-gray-500">
+                                    <span className="mt-2 inline-block rounded bg-white/10 px-2 py-0.5 text-xs text-gray-300">
                                         Keyword: {idea.keyword}
                                     </span>
                                 )}
-                                <span className="mt-3 inline-flex items-center gap-1 text-xs text-gray-500 group-hover:text-[#D5FF00]">
+                                <span className="mt-3 inline-flex items-center gap-1 text-xs text-gray-300 group-hover:text-[#D5FF00]">
                                     <Wand2 className="h-3 w-3" /> Click to write this article
                                 </span>
                             </button>
@@ -1530,7 +1530,7 @@ function AIWriter({ token, onUseContent }) {
             )}
 
             {step === 'writing' && (
-                <div className="flex items-center gap-3 py-12 text-gray-400">
+                <div className="flex items-center gap-3 py-12 text-gray-300">
                     <div className="h-5 w-5 animate-spin rounded-full border-2 border-[#D5FF00] border-t-transparent" />
                     <span>AI is writing your editorial article...</span>
                 </div>
@@ -1542,7 +1542,7 @@ function AIWriter({ token, onUseContent }) {
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-[#D5FF00]">SEO Metadata</h3>
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                             <div>
-                                <label className="mb-1 block text-xs text-gray-500">SEO Title</label>
+                                <label className="mb-1 block text-xs text-gray-300">SEO Title</label>
                                 <input
                                     type="text"
                                     value={editableSeo.seo_title}
@@ -1552,7 +1552,7 @@ function AIWriter({ token, onUseContent }) {
                                 <p className="mt-1 text-xs text-gray-600">{editableSeo.seo_title.length}/60 characters</p>
                             </div>
                             <div>
-                                <label className="mb-1 block text-xs text-gray-500">Primary Keyword</label>
+                                <label className="mb-1 block text-xs text-gray-300">Primary Keyword</label>
                                 <input
                                     type="text"
                                     value={editableSeo.primary_keyword}
@@ -1562,7 +1562,7 @@ function AIWriter({ token, onUseContent }) {
                             </div>
                         </div>
                         <div>
-                            <label className="mb-1 block text-xs text-gray-500">Meta Description</label>
+                            <label className="mb-1 block text-xs text-gray-300">Meta Description</label>
                             <input
                                 type="text"
                                 value={editableSeo.meta_description}
@@ -1572,7 +1572,7 @@ function AIWriter({ token, onUseContent }) {
                             <p className="mt-1 text-xs text-gray-600">{editableSeo.meta_description.length}/160 characters</p>
                         </div>
                         <div>
-                            <label className="mb-1 block text-xs text-gray-500">Secondary Keywords</label>
+                            <label className="mb-1 block text-xs text-gray-300">Secondary Keywords</label>
                             <div className="flex flex-wrap gap-2">
                                 {editableSeo.secondary_keywords.map((kw, i) => (
                                     <span key={i} className="rounded bg-white/10 px-2 py-1 text-xs text-gray-300">{kw}</span>
@@ -1582,7 +1582,7 @@ function AIWriter({ token, onUseContent }) {
                     </div>
 
                     <div>
-                        <label className="mb-2 block text-sm font-medium text-gray-400">Article Content</label>
+                        <label className="mb-2 block text-sm font-medium text-gray-300">Article Content</label>
                         <textarea
                             value={editableArticle}
                             onChange={e => setEditableArticle(e.target.value)}
@@ -1596,14 +1596,14 @@ function AIWriter({ token, onUseContent }) {
                             <h3 className="mb-2 text-sm font-semibold uppercase tracking-wider text-[#D5FF00]">Suggested Internal Links</h3>
                             <div className="space-y-1">
                                 {suggestedLinks.map((link, i) => (
-                                    <p key={i} className="text-sm text-gray-400">{i + 1}. {link}</p>
+                                    <p key={i} className="text-sm text-gray-300">{i + 1}. {link}</p>
                                 ))}
                             </div>
                         </div>
                     )}
 
                     <div className="space-y-3">
-                        <label className="block text-sm font-medium text-gray-400">Cover Image</label>
+                        <label className="block text-sm font-medium text-gray-300">Cover Image</label>
                         {generatedImageUrl ? (
                             <div className="space-y-3">
                                 <img src={generatedImageUrl} alt="Generated cover" className="h-[200px] w-full rounded border border-white/10 object-cover" />
@@ -1704,7 +1704,7 @@ function BlogsSection({ token, onUnauthorized }) {
         return (
             <>
                 <div className="mb-6 flex items-center gap-4">
-                    <button onClick={() => setView('list')} className="rounded p-2 text-gray-400 hover:bg-white/10 hover:text-white">
+                    <button onClick={() => setView('list')} className="rounded p-2 text-gray-300 hover:bg-white/10 hover:text-white">
                         <ChevronLeft className="h-5 w-5" />
                     </button>
                     <h1 className="oswald-500 text-3xl uppercase">AI Writer</h1>
@@ -1738,9 +1738,9 @@ function BlogsSection({ token, onUnauthorized }) {
                 </div>
             </div>
 
-            {loading && <p className="text-gray-400">Loading...</p>}
+            {loading && <p className="text-gray-300">Loading...</p>}
             {error && error !== 'Unauthorized' && <p className="text-red-400">{error}</p>}
-            {!loading && !error && blogs?.length === 0 && <p className="text-gray-400">No blog posts yet. Create your first one!</p>}
+            {!loading && !error && blogs?.length === 0 && <p className="text-gray-300">No blog posts yet. Create your first one!</p>}
 
             {!loading && !error && blogs?.length > 0 && (
                 <div className="space-y-3">
@@ -1752,7 +1752,7 @@ function BlogsSection({ token, onUnauthorized }) {
                                 )}
                                 <div>
                                     <h3 className="font-medium text-white">{blog.title}</h3>
-                                    <p className="text-sm text-gray-400">
+                                    <p className="text-sm text-gray-300">
                                         {blog.category} · {blog.date} · {blog.published ? 'Published' : 'Draft'}
                                     </p>
                                 </div>
@@ -1760,13 +1760,13 @@ function BlogsSection({ token, onUnauthorized }) {
                             <div className="flex items-center gap-2">
                                 <button
                                     onClick={() => { setEditingBlog(blog); setView('edit') }}
-                                    className="rounded p-2 text-gray-400 hover:bg-white/10 hover:text-white"
+                                    className="rounded p-2 text-gray-300 hover:bg-white/10 hover:text-white"
                                 >
                                     <Edit3 className="h-4 w-4" />
                                 </button>
                                 <button
                                     onClick={() => handleDelete(blog.id)}
-                                    className="rounded p-2 text-gray-400 hover:bg-red-500/20 hover:text-red-400"
+                                    className="rounded p-2 text-gray-300 hover:bg-red-500/20 hover:text-red-400"
                                 >
                                     <Trash2 className="h-4 w-4" />
                                 </button>
@@ -2015,7 +2015,7 @@ function BlogEditor({ blog, onSave, onCancel, saving, token, aiPrefill }) {
     return (
         <>
             <div className="mb-6 flex items-center gap-4">
-                <button onClick={onCancel} className="rounded p-2 text-gray-400 hover:bg-white/10 hover:text-white">
+                <button onClick={onCancel} className="rounded p-2 text-gray-300 hover:bg-white/10 hover:text-white">
                     <ChevronLeft className="h-5 w-5" />
                 </button>
                 <h1 className="oswald-500 text-3xl uppercase">{isEditing ? 'Edit Post' : 'New Post'}</h1>
@@ -2024,8 +2024,8 @@ function BlogEditor({ blog, onSave, onCancel, saving, token, aiPrefill }) {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
                 <div className="space-y-5">
                     <div>
-                        <label className="mb-1 block text-sm font-medium text-gray-400">Cover Image</label>
-                        <p className="mb-2 text-xs text-gray-500">Landscape orientation, 1200 x 450px recommended (16:9 or wider)</p>
+                        <label className="mb-1 block text-sm font-medium text-gray-300">Cover Image</label>
+                        <p className="mb-2 text-xs text-gray-300">Landscape orientation, 1200 x 450px recommended (16:9 or wider)</p>
                         <div className="flex items-center gap-4">
                             {imageUrl && <img src={imageUrl} alt="" className="h-20 w-32 rounded object-cover" />}
                             <label className="flex cursor-pointer items-center gap-2 rounded border border-white/20 px-4 py-2 text-sm text-gray-300 hover:bg-white/5">
@@ -2046,19 +2046,19 @@ function BlogEditor({ blog, onSave, onCancel, saving, token, aiPrefill }) {
                     </div>
 
                     <div>
-                        <label className="mb-1 block text-sm font-medium text-gray-400">Paste your copy</label>
-                        <p className="mb-2 text-xs text-gray-500">First line = title. ALL CAPS lines = headings. "Quoted text" = quote. Lines starting with - = bullet list. **bold**, *italic*, [text](url) for rich formatting.</p>
+                        <label className="mb-1 block text-sm font-medium text-gray-300">Paste your copy</label>
+                        <p className="mb-2 text-xs text-gray-300">First line = title. ALL CAPS lines = headings. "Quoted text" = quote. Lines starting with - = bullet list. **bold**, *italic*, [text](url) for rich formatting.</p>
                         <div className="flex items-center gap-1 border border-white/10 border-b-0 bg-white/[0.03] px-2 py-1.5">
-                            <button type="button" onClick={handleBold} title="Bold (select text first)" className="rounded p-1.5 text-gray-400 hover:bg-white/10 hover:text-white">
+                            <button type="button" onClick={handleBold} title="Bold (select text first)" className="rounded p-1.5 text-gray-300 hover:bg-white/10 hover:text-white">
                                 <Bold className="h-4 w-4" />
                             </button>
-                            <button type="button" onClick={handleItalic} title="Italic (select text first)" className="rounded p-1.5 text-gray-400 hover:bg-white/10 hover:text-white">
+                            <button type="button" onClick={handleItalic} title="Italic (select text first)" className="rounded p-1.5 text-gray-300 hover:bg-white/10 hover:text-white">
                                 <Italic className="h-4 w-4" />
                             </button>
-                            <button type="button" onClick={handleLink} title="Insert Link (select text first)" className="rounded p-1.5 text-gray-400 hover:bg-white/10 hover:text-white">
+                            <button type="button" onClick={handleLink} title="Insert Link (select text first)" className="rounded p-1.5 text-gray-300 hover:bg-white/10 hover:text-white">
                                 <Link2 className="h-4 w-4" />
                             </button>
-                            <button type="button" onClick={handleHeading} title="Make Heading (select text first)" className="rounded p-1.5 text-gray-400 hover:bg-white/10 hover:text-white">
+                            <button type="button" onClick={handleHeading} title="Make Heading (select text first)" className="rounded p-1.5 text-gray-300 hover:bg-white/10 hover:text-white">
                                 <Heading className="h-4 w-4" />
                             </button>
                             <span className="ml-2 text-xs text-gray-600">Select text, then click a button</span>
@@ -2089,7 +2089,7 @@ function BlogEditor({ blog, onSave, onCancel, saving, token, aiPrefill }) {
                 </div>
 
                 <div>
-                    <label className="mb-3 block text-sm font-medium text-gray-400">Preview</label>
+                    <label className="mb-3 block text-sm font-medium text-gray-300">Preview</label>
                     <div className="overflow-hidden rounded-xl border border-white/10 bg-[#100422]">
                         {imageUrl ? (
                             <div className="relative">
@@ -2143,7 +2143,7 @@ function PreviewSection({ section }) {
             return (
                 <blockquote className="rounded border-l-2 border-[#D5FF00] bg-white/5 px-3 py-2 text-sm text-white">
                     <span className="font-medium">{section.text}</span>
-                    {section.attribution && <span className="mt-1 block text-xs text-gray-400">&mdash; {section.attribution}</span>}
+                    {section.attribution && <span className="mt-1 block text-xs text-gray-300">&mdash; {section.attribution}</span>}
                 </blockquote>
             )
         case 'list':
@@ -2560,9 +2560,9 @@ function AnalyticsSection({ token, onUnauthorized }) {
         <>
             <div className="mb-6">
                 <h1 className="oswald-500 text-3xl uppercase">Analytics Dashboard</h1>
-                <p className="mt-1 text-sm text-gray-400">Overview of platform activity and revenue</p>
+                <p className="mt-1 text-sm text-gray-300">Overview of platform activity and revenue</p>
             </div>
-            {loading && <p className="text-gray-400">Loading analytics...</p>}
+            {loading && <p className="text-gray-300">Loading analytics...</p>}
             {error && error !== 'Unauthorized' && <p className="text-red-400">{error}</p>}
             {!loading && data && (
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -2575,7 +2575,7 @@ function AnalyticsSection({ token, onUnauthorized }) {
                                         <Icon className="h-5 w-5" />
                                     </div>
                                     <div>
-                                        <p className="text-xs font-medium uppercase tracking-wider text-gray-400">{card.label}</p>
+                                        <p className="text-xs font-medium uppercase tracking-wider text-gray-300">{card.label}</p>
                                         <p className="mt-1 text-2xl font-bold text-white">{card.value}</p>
                                     </div>
                                 </div>
@@ -2640,7 +2640,7 @@ function BookingsSection({ token, onUnauthorized }) {
 
     const statusBadge = (status) => {
         const styles = {
-            pending: 'bg-gray-500/20 text-gray-400',
+            pending: 'bg-gray-500/20 text-gray-300',
             accepted: 'bg-blue-500/20 text-blue-400',
             confirmed: 'bg-green-500/20 text-green-400',
             completed: 'bg-emerald-500/20 text-emerald-400',
@@ -2671,9 +2671,9 @@ function BookingsSection({ token, onUnauthorized }) {
                 ))}
             </div>
 
-            {loading && <p className="text-gray-400">Loading bookings...</p>}
+            {loading && <p className="text-gray-300">Loading bookings...</p>}
             {error && error !== 'Unauthorized' && <p className="text-red-400">{error}</p>}
-            {!loading && !error && filtered?.length === 0 && <p className="text-gray-400">No bookings found.</p>}
+            {!loading && !error && filtered?.length === 0 && <p className="text-gray-300">No bookings found.</p>}
 
             {!loading && !error && filtered?.length > 0 && (
                 <div className="overflow-x-auto">
@@ -2698,12 +2698,12 @@ function BookingsSection({ token, onUnauthorized }) {
                                     <td className="px-4 py-3 text-gray-300">{b.event_type || '—'}</td>
                                     <td className="px-4 py-3">{statusBadge(b.status)}</td>
                                     <td className="px-4 py-3 text-gray-300">{b.budget ? `$${parseFloat(b.budget).toLocaleString()}` : '—'}</td>
-                                    <td className="px-4 py-3 text-gray-400 text-xs">{new Date(b.created_at).toLocaleDateString()}</td>
+                                    <td className="px-4 py-3 text-gray-300 text-xs">{new Date(b.created_at).toLocaleDateString()}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
-                    <p className="mt-4 text-sm text-gray-500">Total: {filtered.length} booking{filtered.length !== 1 ? 's' : ''}</p>
+                    <p className="mt-4 text-sm text-gray-300">Total: {filtered.length} booking{filtered.length !== 1 ? 's' : ''}</p>
                 </div>
             )}
 
@@ -2712,7 +2712,7 @@ function BookingsSection({ token, onUnauthorized }) {
                     <div className="relative max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-lg border border-white/10 bg-[#1a0e2e] p-6" onClick={e => e.stopPropagation()}>
                         <div className="mb-4 flex items-center justify-between">
                             <h2 className="oswald-500 text-xl uppercase text-white">Booking Details</h2>
-                            <button onClick={() => setSelectedBooking(null)} className="text-gray-400 hover:text-white"><X className="h-5 w-5" /></button>
+                            <button onClick={() => setSelectedBooking(null)} className="text-gray-300 hover:text-white"><X className="h-5 w-5" /></button>
                         </div>
                         <div className="space-y-3">
                             <div className="flex justify-between"><span className="text-xs font-semibold uppercase text-[#D5FF00]">Client</span><span className="text-sm text-gray-300">{selectedBooking.client_name}</span></div>
@@ -2726,7 +2726,7 @@ function BookingsSection({ token, onUnauthorized }) {
                             {selectedBooking.notes && <div><span className="text-xs font-semibold uppercase text-[#D5FF00]">Notes</span><p className="mt-1 text-sm text-gray-300">{selectedBooking.notes}</p></div>}
                         </div>
                         <div className="mt-6">
-                            <p className="mb-2 text-xs font-semibold uppercase text-gray-400">Update Status</p>
+                            <p className="mb-2 text-xs font-semibold uppercase text-gray-300">Update Status</p>
                             <div className="flex flex-wrap gap-2">
                                 {['pending', 'accepted', 'confirmed', 'completed', 'declined'].map(s => (
                                     <button key={s} onClick={() => handleUpdateStatus(selectedBooking.id, s)} disabled={updating || selectedBooking.status === s}
@@ -2745,7 +2745,7 @@ function BookingsSection({ token, onUnauthorized }) {
                     <div className="relative max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-lg border border-white/10 bg-[#1a0e2e] p-6" onClick={e => e.stopPropagation()}>
                         <div className="mb-4 flex items-center justify-between">
                             <h2 className="oswald-500 text-xl uppercase text-white">New Booking</h2>
-                            <button onClick={() => setShowCreate(false)} className="text-gray-400 hover:text-white"><X className="h-5 w-5" /></button>
+                            <button onClick={() => setShowCreate(false)} className="text-gray-300 hover:text-white"><X className="h-5 w-5" /></button>
                         </div>
                         <div className="space-y-3">
                             <input type="text" placeholder="Client Name *" value={newBooking.client_name} onChange={e => setNewBooking(p => ({ ...p, client_name: e.target.value }))}
@@ -2807,16 +2807,16 @@ function CommissionsSection({ token, onUnauthorized }) {
         <>
             <div className="mb-6">
                 <h1 className="oswald-500 text-3xl uppercase">Commission Tracking</h1>
-                <p className="mt-1 text-sm text-gray-400">Track 15% commission on confirmed and completed bookings</p>
+                <p className="mt-1 text-sm text-gray-300">Track 15% commission on confirmed and completed bookings</p>
             </div>
 
-            {loading && <p className="text-gray-400">Loading commissions...</p>}
+            {loading && <p className="text-gray-300">Loading commissions...</p>}
             {error && error !== 'Unauthorized' && <p className="text-red-400">{error}</p>}
 
             {!loading && stats && (
                 <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
                     <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                        <p className="text-xs font-medium uppercase text-gray-400">Total Commissionable</p>
+                        <p className="text-xs font-medium uppercase text-gray-300">Total Commissionable</p>
                         <p className="mt-1 text-2xl font-bold text-white">{stats.total_commissionable}</p>
                     </div>
                     <div className="rounded-lg border border-yellow-500/20 bg-yellow-500/5 p-4">
@@ -2830,7 +2830,7 @@ function CommissionsSection({ token, onUnauthorized }) {
                 </div>
             )}
 
-            {!loading && bookings.length === 0 && <p className="text-gray-400">No confirmed or completed bookings yet.</p>}
+            {!loading && bookings.length === 0 && <p className="text-gray-300">No confirmed or completed bookings yet.</p>}
 
             {!loading && bookings.length > 0 && (
                 <div className="overflow-x-auto">
@@ -2865,7 +2865,7 @@ function CommissionsSection({ token, onUnauthorized }) {
                                                 {marking === b.id ? 'Marking...' : 'Mark Paid'}
                                             </button>
                                         )}
-                                        {b.commission_status === 'paid' && <span className="text-xs text-gray-500">Paid</span>}
+                                        {b.commission_status === 'paid' && <span className="text-xs text-gray-300">Paid</span>}
                                     </td>
                                 </tr>
                             ))}
@@ -2918,10 +2918,10 @@ function FeaturedArtistsSection({ token, onUnauthorized }) {
         <>
             <div className="mb-6">
                 <h1 className="oswald-500 text-3xl uppercase">Featured Artists</h1>
-                <p className="mt-1 text-sm text-gray-400">Toggle featured status and set display order for the artist directory. Lower order numbers appear first.</p>
+                <p className="mt-1 text-sm text-gray-300">Toggle featured status and set display order for the artist directory. Lower order numbers appear first.</p>
             </div>
 
-            {loading && <p className="text-gray-400">Loading artists...</p>}
+            {loading && <p className="text-gray-300">Loading artists...</p>}
             {error && error !== 'Unauthorized' && <p className="text-red-400">{error}</p>}
 
             {!loading && artists && (
@@ -2930,7 +2930,7 @@ function FeaturedArtistsSection({ token, onUnauthorized }) {
                         <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#D5FF00]">
                             <Star className="h-4 w-4 fill-[#D5FF00]" /> Featured ({featuredArtists.length})
                         </h2>
-                        {featuredArtists.length === 0 && <p className="text-sm text-gray-500">No featured artists yet. Toggle the star on any approved artist below.</p>}
+                        {featuredArtists.length === 0 && <p className="text-sm text-gray-300">No featured artists yet. Toggle the star on any approved artist below.</p>}
                         <div className="space-y-2">
                             {featuredArtists.map(a => (
                                 <div key={a.id} className="flex items-center justify-between rounded border border-yellow-500/20 bg-yellow-500/5 p-3">
@@ -2941,11 +2941,11 @@ function FeaturedArtistsSection({ token, onUnauthorized }) {
                                         </button>
                                         <div>
                                             <span className="font-medium text-white">{[a.first_name, a.last_name].filter(Boolean).join(' ')}</span>
-                                            <span className="ml-2 text-xs text-gray-400">{a.genre || ''} {a.city ? `· ${a.city}` : ''}</span>
+                                            <span className="ml-2 text-xs text-gray-300">{a.genre || ''} {a.city ? `· ${a.city}` : ''}</span>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <span className="text-xs text-gray-400">Order:</span>
+                                        <span className="text-xs text-gray-300">Order:</span>
                                         <input type="number" defaultValue={a.featured_order || 0}
                                             onBlur={e => handleUpdateOrder(a.id, e.target.value)}
                                             className="w-16 rounded border border-white/10 bg-white/5 px-2 py-1 text-center text-sm text-white focus:border-[#D5FF00] focus:outline-none" />
@@ -2956,7 +2956,7 @@ function FeaturedArtistsSection({ token, onUnauthorized }) {
                     </div>
 
                     <div>
-                        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400">Other Approved Artists ({otherArtists.length})</h2>
+                        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-300">Other Approved Artists ({otherArtists.length})</h2>
                         <div className="space-y-2">
                             {otherArtists.map(a => (
                                 <div key={a.id} className="flex items-center justify-between rounded border border-white/10 bg-white/5 p-3">
@@ -2967,7 +2967,7 @@ function FeaturedArtistsSection({ token, onUnauthorized }) {
                                         </button>
                                         <div>
                                             <span className="text-sm text-gray-300">{[a.first_name, a.last_name].filter(Boolean).join(' ')}</span>
-                                            <span className="ml-2 text-xs text-gray-500">{a.genre || ''} {a.city ? `· ${a.city}` : ''}</span>
+                                            <span className="ml-2 text-xs text-gray-300">{a.genre || ''} {a.city ? `· ${a.city}` : ''}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3020,7 +3020,7 @@ function ReviewsSection({ token, onUnauthorized }) {
         <>
             <div className="mb-6">
                 <h1 className="oswald-500 text-3xl uppercase">Review Moderation</h1>
-                <p className="mt-1 text-sm text-gray-400">Approve or reject client reviews before they appear on artist profiles</p>
+                <p className="mt-1 text-sm text-gray-300">Approve or reject client reviews before they appear on artist profiles</p>
             </div>
 
             <div className="mb-6 flex flex-wrap gap-2">
@@ -3032,9 +3032,9 @@ function ReviewsSection({ token, onUnauthorized }) {
                 ))}
             </div>
 
-            {loading && <p className="text-gray-400">Loading reviews...</p>}
+            {loading && <p className="text-gray-300">Loading reviews...</p>}
             {error && error !== 'Unauthorized' && <p className="text-red-400">{error}</p>}
-            {!loading && filtered.length === 0 && <p className="text-gray-400">No reviews found.</p>}
+            {!loading && filtered.length === 0 && <p className="text-gray-300">No reviews found.</p>}
 
             {!loading && filtered.length > 0 && (
                 <div className="space-y-3">
@@ -3044,7 +3044,7 @@ function ReviewsSection({ token, onUnauthorized }) {
                                 <div className="flex-1">
                                     <div className="flex items-center gap-3">
                                         <span className="font-medium text-white">{review.client_name}</span>
-                                        <span className="text-xs text-gray-400">for {[review.artist_first_name, review.artist_last_name].filter(Boolean).join(' ') || 'Unknown Artist'}</span>
+                                        <span className="text-xs text-gray-300">for {[review.artist_first_name, review.artist_last_name].filter(Boolean).join(' ') || 'Unknown Artist'}</span>
                                         {review.approved && <span className="rounded bg-green-500/20 px-2 py-0.5 text-xs font-medium text-green-400">Approved</span>}
                                         {!review.approved && <span className="rounded bg-yellow-500/20 px-2 py-0.5 text-xs font-medium text-yellow-400">Pending</span>}
                                     </div>
@@ -3054,7 +3054,7 @@ function ReviewsSection({ token, onUnauthorized }) {
                                         ))}
                                     </div>
                                     <p className="mt-2 text-sm text-gray-300">{review.review_text}</p>
-                                    <p className="mt-1 text-xs text-gray-500">{new Date(review.created_at).toLocaleDateString()}</p>
+                                    <p className="mt-1 text-xs text-gray-300">{new Date(review.created_at).toLocaleDateString()}</p>
                                 </div>
                                 <div className="flex items-center gap-2 ml-4">
                                     {!review.approved && (
@@ -3070,7 +3070,7 @@ function ReviewsSection({ token, onUnauthorized }) {
                                         </button>
                                     )}
                                     <button onClick={() => handleDelete(review.id)}
-                                        className="rounded p-1.5 text-gray-500 hover:bg-red-500/10 hover:text-red-400">
+                                        className="rounded p-1.5 text-gray-300 hover:bg-red-500/10 hover:text-red-400">
                                         <Trash2 className="h-4 w-4" />
                                     </button>
                                 </div>
@@ -3242,19 +3242,19 @@ function PagesSection({ token, onUnauthorized }) {
         return (
             <>
                 <div className="mb-6 flex items-center gap-4">
-                    <button onClick={() => { setSelectedPage(null); setContent({}) }} className="rounded p-2 text-gray-400 hover:bg-white/10 hover:text-white">
+                    <button onClick={() => { setSelectedPage(null); setContent({}) }} className="rounded p-2 text-gray-300 hover:bg-white/10 hover:text-white">
                         <ChevronLeft className="h-5 w-5" />
                     </button>
                     <h1 className="oswald-500 text-3xl uppercase">{selectedPage.name}</h1>
                 </div>
 
                 {loading ? (
-                    <p className="text-gray-400">Loading...</p>
+                    <p className="text-gray-300">Loading...</p>
                 ) : (
                     <div className="max-w-3xl space-y-5">
                         {selectedPage.sections.map(section => (
                             <div key={section.key}>
-                                <label className="mb-1 block text-sm font-medium text-gray-400">{section.label}</label>
+                                <label className="mb-1 block text-sm font-medium text-gray-300">{section.label}</label>
                                 {section.type === 'text' ? (
                                     <textarea
                                         value={content[section.key] || ''}
@@ -3269,7 +3269,7 @@ function PagesSection({ token, onUnauthorized }) {
                                             <div className="min-w-0 flex-1">
                                                 <p className="truncate text-sm font-medium text-white">{getFilename(content[section.key])}</p>
                                                 {content[section.key] && (
-                                                    <p className="truncate text-xs text-gray-500">{content[section.key]}</p>
+                                                    <p className="truncate text-xs text-gray-300">{content[section.key]}</p>
                                                 )}
                                             </div>
                                         </div>
@@ -3306,13 +3306,13 @@ function PagesSection({ token, onUnauthorized }) {
                                             return previewSrc ? (
                                                 <div className="rounded border border-white/10 bg-white/5 p-2 inline-block">
                                                     <img src={previewSrc} alt={section.label} className="max-h-40 max-w-xs rounded object-contain" />
-                                                    <p className="mt-1 text-xs text-gray-500">
+                                                    <p className="mt-1 text-xs text-gray-300">
                                                         {content[section.key] ? 'Current (uploaded)' : 'Current (default)'}
                                                     </p>
                                                 </div>
                                             ) : (
                                                 <div className="rounded border border-dashed border-white/20 bg-white/5 px-4 py-3 inline-block">
-                                                    <p className="text-xs text-gray-500">No image set</p>
+                                                    <p className="text-xs text-gray-300">No image set</p>
                                                 </div>
                                             )
                                         })()}
@@ -3367,9 +3367,9 @@ function PagesSection({ token, onUnauthorized }) {
                     >
                         <div>
                             <h3 className="font-medium text-white">{page.name}</h3>
-                            <p className="text-sm text-gray-400">{page.sections.length} editable sections</p>
+                            <p className="text-sm text-gray-300">{page.sections.length} editable sections</p>
                         </div>
-                        <Edit3 className="h-4 w-4 text-gray-400" />
+                        <Edit3 className="h-4 w-4 text-gray-300" />
                     </button>
                 ))}
             </div>
@@ -3380,7 +3380,7 @@ function PagesSection({ token, onUnauthorized }) {
 function InputField({ label, value, onChange, placeholder }) {
     return (
         <div>
-            <label className="mb-1 block text-sm font-medium text-gray-400">{label}</label>
+            <label className="mb-1 block text-sm font-medium text-gray-300">{label}</label>
             <input
                 value={value}
                 onChange={e => onChange(e.target.value)}
@@ -3394,7 +3394,7 @@ function InputField({ label, value, onChange, placeholder }) {
 function TextareaField({ label, value, onChange, rows = 3 }) {
     return (
         <div>
-            <label className="mb-1 block text-sm font-medium text-gray-400">{label}</label>
+            <label className="mb-1 block text-sm font-medium text-gray-300">{label}</label>
             <textarea
                 value={value}
                 onChange={e => onChange(e.target.value)}

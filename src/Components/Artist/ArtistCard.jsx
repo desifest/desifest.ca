@@ -44,7 +44,7 @@ export default function ArtistCard({ artist }) {
                 </h3>
 
                 {location && (
-                    <div className="mt-1 flex items-center gap-1 text-sm text-gray-400">
+                    <div className="mt-1 flex items-center gap-1 text-sm text-gray-300">
                         <MapPin className="h-3.5 w-3.5 flex-shrink-0" />
                         <span className="truncate">{location}</span>
                     </div>
@@ -70,7 +70,7 @@ export default function ArtistCard({ artist }) {
                                 <Star key={s} className={`h-3 w-3 ${s <= Math.round(artist.avg_rating) ? 'fill-[#D5FF00] text-[#D5FF00]' : 'text-gray-600'}`} />
                             ))}
                         </div>
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-300">
                             {artist.avg_rating} ({artist.review_count})
                         </span>
                     </div>

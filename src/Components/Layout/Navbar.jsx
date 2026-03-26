@@ -5,6 +5,7 @@ import logo from "@/Assets/COMMON/logon.png";
 
 const navLinks = [
   { label: "The 2026 Concert", path: "/concerts" },
+  { label: "Our Artists", path: "/our-artists" },
   { label: "About", path: "/about" },
   { label: "Community", path: "/community" },
   { label: "Booking", path: "/booking" },

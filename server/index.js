@@ -10,6 +10,7 @@ import { registerBookingRoutes } from './bookings.js';
 import { registerReviewRoutes } from './reviews.js';
 import { registerArtistProfileRoutes } from './artist-profile.js';
 import { setupDashboardRoutes } from './dashboard.js';
+import { SITE_URL, ROUTE_META, injectMeta, getStaticMeta } from './seo-meta.js';
 let _seedData = null;
 function getSeedData() {
   if (!_seedData) _seedData = import('./seed-data.js');
@@ -2256,15 +2257,17 @@ app.get('/sitemap.xml', async (req, res) => {
       { path: '/concerts', changefreq: 'weekly', priority: '0.9' },
       { path: '/about', changefreq: 'monthly', priority: '0.8' },
       { path: '/artists', changefreq: 'weekly', priority: '0.8' },
+      { path: '/our-artists', changefreq: 'monthly', priority: '0.8' },
+      { path: '/booking', changefreq: 'monthly', priority: '0.7' },
       { path: '/community', changefreq: 'monthly', priority: '0.7' },
       { path: '/media', changefreq: 'weekly', priority: '0.7' },
+      { path: '/umafoundation', changefreq: 'monthly', priority: '0.7' },
       { path: '/sponsorship', changefreq: 'monthly', priority: '0.7' },
       { path: '/open-mic', changefreq: 'monthly', priority: '0.6' },
       { path: '/sofa-session', changefreq: 'monthly', priority: '0.6' },
       { path: '/press-kit', changefreq: 'monthly', priority: '0.6' },
       { path: '/artistsignup', changefreq: 'monthly', priority: '0.5' },
       { path: '/volunteersignup', changefreq: 'monthly', priority: '0.5' },
-      { path: '/shop', changefreq: 'weekly', priority: '0.5' },
     ];
 
     const blogRows = await pool.query(
@@ -2274,7 +2277,7 @@ app.get('/sitemap.xml', async (req, res) => {
       "SELECT slug, created_at FROM artist_signups WHERE slug IS NOT NULL AND slug != '' AND profile_approved = true ORDER BY created_at DESC"
     );
 
-    const base = 'https://desifest.ca';
+    const base = 'https://www.desifest.ca';
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
@@ -2311,13 +2314,29 @@ if (fs.existsSync(distPath)) {
     acceptRanges: true,
   }));
 }
+const KNOWN_CLIENT_ROUTES = new Set([
+  ...Object.keys(ROUTE_META),
+  '/admin', '/login', '/signup', '/dashboard',
+]);
+
+app.get('/blog', (req, res) => {
+  res.redirect(301, `${SITE_URL}/media`);
+});
+
 app.get(['/', '/{*splat}'], async (req, res, next) => {
   if (req.path.startsWith('/api') || req.path.startsWith('/health')) {
     return next();
   }
 
+  if (!cachedIndexHtml) {
+    return res.status(200).send('DESIFEST - Loading...');
+  }
+
+  const normalizedPath = req.path.replace(/\/+$/, '') || '/';
+  const pageUrl = `${SITE_URL}${normalizedPath}`;
+
   const blogMatch = req.path.match(/^\/blog\/([^/]+)\/?$/);
-  if (blogMatch && cachedIndexHtml) {
+  if (blogMatch) {
     try {
       const slug = blogMatch[1];
       const result = await pool.query(
@@ -2326,70 +2345,78 @@ app.get(['/', '/{*splat}'], async (req, res, next) => {
       );
       if (result.rows.length > 0) {
         const blog = result.rows[0];
-        const siteUrl = 'https://www.desifest.ca';
-        const blogUrl = `${siteUrl}/blog/${blog.slug}`;
-        const ogTitle = (blog.meta?.seo_title || blog.full_title || blog.title || '').replace(/"/g, '&quot;');
-        const ogDesc = (blog.meta?.meta_description || blog.description || '').replace(/"/g, '&quot;');
-        const ogImage = blog.image_url || `${siteUrl}/og-image.png`;
-
-        let html = cachedIndexHtml;
-        html = html.replace(
-          /<meta property="og:type" content="website" \/>/,
-          '<meta property="og:type" content="article" />'
-        );
-        html = html.replace(
-          /<meta property="og:url" content="[^"]*" \/>/,
-          `<meta property="og:url" content="${blogUrl}" />`
-        );
-        html = html.replace(
-          /<meta property="og:title" content="[^"]*" \/>/,
-          `<meta property="og:title" content="${ogTitle}" />`
-        );
-        html = html.replace(
-          /<meta property="og:description" content="[^"]*" \/>/,
-          `<meta property="og:description" content="${ogDesc}" />`
-        );
-        html = html.replace(
-          /<meta property="og:image" content="[^"]*" \/>/,
-          `<meta property="og:image" content="${ogImage}" />`
-        );
-        html = html.replace(
-          /<meta name="twitter:title" content="[^"]*" \/>/,
-          `<meta name="twitter:title" content="${ogTitle}" />`
-        );
-        html = html.replace(
-          /<meta name="twitter:description" content="[^"]*" \/>/,
-          `<meta name="twitter:description" content="${ogDesc}" />`
-        );
-        html = html.replace(
-          /<meta name="twitter:image" content="[^"]*" \/>/,
-          `<meta name="twitter:image" content="${ogImage}" />`
-        );
-        html = html.replace(
-          /<title>[^<]*<\/title>/,
-          `<title>${ogTitle} | DESIFEST</title>`
-        );
-        html = html.replace(
-          /<meta name="description" content="[^"]*" \/>/,
-          `<meta name="description" content="${ogDesc}" />`
-        );
-        html = html.replace(
-          /<link rel="canonical" href="[^"]*" \/>/,
-          `<link rel="canonical" href="${blogUrl}" />`
-        );
-
+        const blogTitle = (blog.meta?.seo_title || blog.full_title || blog.title || '') + ' | DESIFEST';
+        const blogDesc = blog.meta?.meta_description || blog.description || '';
+        const blogImage = blog.image_url || undefined;
+        const blogUrl = `${SITE_URL}/blog/${blog.slug}`;
+        const html = injectMeta(cachedIndexHtml, {
+          title: blogTitle,
+          description: blogDesc,
+          url: blogUrl,
+          image: blogImage,
+          type: 'article',
+        });
         return res.type('html').status(200).send(html);
       }
     } catch (err) {
       console.error('Blog OG meta error:', err.message);
     }
+    const html = injectMeta(cachedIndexHtml, { title: 'Not Found | DESIFEST', description: '', url: pageUrl });
+    return res.type('html').status(404).send(html);
   }
 
-  if (cachedIndexHtml) {
-    res.type('html').status(200).send(cachedIndexHtml);
-  } else {
-    res.status(200).send('DESIFEST - Loading...');
+  const artistMatch = req.path.match(/^\/artists\/([^/]+)\/?$/);
+  if (artistMatch) {
+    try {
+      const slug = artistMatch[1];
+      const result = await pool.query(
+        "SELECT first_name, last_name, genre, city, bio, press_photo_data IS NOT NULL as has_photo FROM artist_signups WHERE slug = $1 AND profile_approved = true",
+        [slug]
+      );
+      if (result.rows.length > 0) {
+        const artist = result.rows[0];
+        const fullName = [artist.first_name, artist.last_name].filter(Boolean).join(' ');
+        const artistTitle = `${fullName} | DESIFEST Artist Network`;
+        const artistDesc = artist.bio
+          ? artist.bio.substring(0, 160).replace(/\s+/g, ' ').trim()
+          : `${fullName} — ${[artist.genre, artist.city].filter(Boolean).join(', ')}. Discover and book this artist through the DESIFEST Artist Network.`;
+        const artistImage = artist.has_photo ? `${SITE_URL}/api/artists/${slug}/photo` : undefined;
+        const artistUrl = `${SITE_URL}/artists/${slug}`;
+        const html = injectMeta(cachedIndexHtml, {
+          title: artistTitle,
+          description: artistDesc,
+          url: artistUrl,
+          image: artistImage,
+        });
+        return res.type('html').status(200).send(html);
+      }
+    } catch (err) {
+      console.error('Artist OG meta error:', err.message);
+    }
+    const html = injectMeta(cachedIndexHtml, { title: 'Not Found | DESIFEST', description: '', url: pageUrl });
+    return res.type('html').status(404).send(html);
   }
+
+  const staticMeta = getStaticMeta(req.path);
+  if (staticMeta) {
+    const html = injectMeta(cachedIndexHtml, {
+      title: staticMeta.title,
+      description: staticMeta.description,
+      url: pageUrl,
+    });
+    return res.type('html').status(200).send(html);
+  }
+
+  const legalMatch = req.path.match(/^\/legal\/([^/]+)\/?$/);
+  const isKnownRoute = KNOWN_CLIENT_ROUTES.has(normalizedPath) || legalMatch;
+
+  if (isKnownRoute) {
+    const html = injectMeta(cachedIndexHtml, { title: 'DESIFEST 2026', description: '', url: pageUrl });
+    return res.type('html').status(200).send(html);
+  }
+
+  const html = injectMeta(cachedIndexHtml, { title: 'Not Found | DESIFEST', description: '', url: pageUrl });
+  res.type('html').status(404).send(html);
 });
 
 app.use((err, req, res, next) => {

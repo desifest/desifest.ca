@@ -253,12 +253,12 @@ export default function LegalPage() {
       <div className="mx-auto max-w-4xl">
         <button
           onClick={() => navigate(-1)}
-          className="dm-sans-400 mb-6 flex items-center gap-2 text-sm text-gray-400 transition hover:text-white"
+          className="dm-sans-400 mb-6 flex items-center gap-2 text-sm text-gray-300 transition hover:text-white"
         >
           <span>&larr;</span> Go Back
         </button>
         <h1 className="oswaldd mb-2 text-4xl font-bold md:text-5xl">{page.title}</h1>
-        <p className="dm-sans-400 mb-12 text-sm text-gray-400">Last updated: {page.lastUpdated}</p>
+        <p className="dm-sans-400 mb-12 text-sm text-gray-300">Last updated: {page.lastUpdated}</p>
 
         <div className="space-y-10">
           {page.sections.map((section, i) => (

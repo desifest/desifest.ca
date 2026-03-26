@@ -54,7 +54,7 @@ function BookingModal({ artist, slug, onClose }) {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm" onClick={onClose}>
             <div className="relative mx-4 max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-3xl border border-white/10 bg-[#1a0a2e] p-8" onClick={e => e.stopPropagation()}>
-                <button onClick={onClose} className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-400 transition hover:text-white">
+                <button onClick={onClose} className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-300 transition hover:text-white">
                     <X className="h-4 w-4" />
                 </button>
 
@@ -72,7 +72,7 @@ function BookingModal({ artist, slug, onClose }) {
                 ) : (
                     <>
                         <h3 className="oswald-500 mb-1 text-2xl text-white">Book This Artist</h3>
-                        <p className="mb-6 text-sm text-gray-400">Fill out the form to send a booking request</p>
+                        <p className="mb-6 text-sm text-gray-300">Fill out the form to send a booking request</p>
 
                         {error && (
                             <div className="mb-4 flex items-center gap-2 rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-300">
@@ -83,44 +83,44 @@ function BookingModal({ artist, slug, onClose }) {
 
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
-                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-400">Your Name *</label>
+                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-300">Your Name *</label>
                                 <input type="text" required value={form.name} onChange={e => updateField('name', e.target.value)} className="w-full rounded-lg border border-white/15 bg-[#100422] px-3 py-2.5 text-sm text-white outline-none focus:border-[#D5FF00]/50" />
                             </div>
                             <div>
-                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-400">Email *</label>
+                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-300">Email *</label>
                                 <input type="email" required value={form.email} onChange={e => updateField('email', e.target.value)} className="w-full rounded-lg border border-white/15 bg-[#100422] px-3 py-2.5 text-sm text-white outline-none focus:border-[#D5FF00]/50" />
                             </div>
                             <div>
-                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-400">Event Date *</label>
+                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-300">Event Date *</label>
                                 <input type="date" required value={form.eventDate} onChange={e => updateField('eventDate', e.target.value)} className="w-full rounded-lg border border-white/15 bg-[#100422] px-3 py-2.5 text-sm text-white outline-none focus:border-[#D5FF00]/50" />
                             </div>
                             <div>
-                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-400">Event Type</label>
+                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-300">Event Type</label>
                                 <select value={form.eventType} onChange={e => updateField('eventType', e.target.value)} className="w-full rounded-lg border border-white/15 bg-[#100422] px-3 py-2.5 text-sm text-white outline-none focus:border-[#D5FF00]/50">
                                     <option value="">Select type...</option>
                                     {EVENT_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
                                 </select>
                             </div>
                             <div>
-                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-400">Audience Size</label>
+                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-300">Audience Size</label>
                                 <select value={form.audienceSize} onChange={e => updateField('audienceSize', e.target.value)} className="w-full rounded-lg border border-white/15 bg-[#100422] px-3 py-2.5 text-sm text-white outline-none focus:border-[#D5FF00]/50">
                                     <option value="">Select size...</option>
                                     {AUDIENCE_SIZES.map(s => <option key={s} value={s}>{s}</option>)}
                                 </select>
                             </div>
                             <div>
-                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-400">City / Venue</label>
+                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-300">City / Venue</label>
                                 <input type="text" value={form.cityVenue} onChange={e => updateField('cityVenue', e.target.value)} placeholder="e.g. Toronto, ON" className="w-full rounded-lg border border-white/15 bg-[#100422] px-3 py-2.5 text-sm text-white placeholder-gray-600 outline-none focus:border-[#D5FF00]/50" />
                             </div>
                             <div>
-                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-400">Budget Range</label>
+                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-300">Budget Range</label>
                                 <select value={form.budgetRange} onChange={e => updateField('budgetRange', e.target.value)} className="w-full rounded-lg border border-white/15 bg-[#100422] px-3 py-2.5 text-sm text-white outline-none focus:border-[#D5FF00]/50">
                                     <option value="">Select range...</option>
                                     {BUDGET_RANGES.map(b => <option key={b} value={b}>{b}</option>)}
                                 </select>
                             </div>
                             <div>
-                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-400">Message</label>
+                                <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-300">Message</label>
                                 <textarea value={form.message} onChange={e => updateField('message', e.target.value)} rows={3} placeholder="Tell the artist about your event..." className="w-full resize-none rounded-lg border border-white/15 bg-[#100422] px-3 py-2.5 text-sm text-white placeholder-gray-600 outline-none focus:border-[#D5FF00]/50" />
                             </div>
                             <button type="submit" disabled={submitting} className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-[#D5FF00] py-3 text-sm font-bold uppercase tracking-wider text-[#100422] transition hover:bg-[#c5ef00] disabled:opacity-60">
@@ -184,7 +184,7 @@ export default function ArtistProfilePage() {
             <main className="flex min-h-screen items-center justify-center bg-[#070707] text-white">
                 <div className="flex flex-col items-center gap-4">
                     <div className="h-10 w-10 animate-spin rounded-full border-2 border-[#D5FF00] border-t-transparent" />
-                    <p className="text-gray-400">Loading artist profile...</p>
+                    <p className="text-gray-300">Loading artist profile...</p>
                 </div>
             </main>
         )
@@ -196,7 +196,7 @@ export default function ArtistProfilePage() {
                 <SEO title="Artist Not Found" description="The artist profile you're looking for could not be found." />
                 <main className="flex min-h-screen flex-col items-center justify-center bg-[#070707] px-6 text-white">
                     <h1 className="oswald-500 text-4xl">Artist Not Found</h1>
-                    <p className="mt-4 text-gray-400">The artist profile you're looking for doesn't exist or hasn't been approved yet.</p>
+                    <p className="mt-4 text-gray-300">The artist profile you're looking for doesn't exist or hasn't been approved yet.</p>
                     <Link to="/artists" className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#D5FF00] px-6 py-3 text-sm font-medium text-[#D5FF00] transition hover:bg-[#D5FF00] hover:text-[#100422]">
                         <ChevronLeft className="h-4 w-4" />
                         Back to Artists
@@ -279,7 +279,7 @@ export default function ArtistProfilePage() {
                 <section className="relative w-full overflow-hidden bg-[#070707] pb-0 pt-24">
                     <div className="mx-auto w-full max-w-7xl px-4 pl-20 md:pl-28 lg:pl-28 lg:pr-12">
 
-                        <Link to="/artists" className="mb-6 inline-flex items-center gap-1 text-sm text-gray-400 transition hover:text-[#D5FF00]">
+                        <Link to="/artists" className="mb-6 inline-flex items-center gap-1 text-sm text-gray-300 transition hover:text-[#D5FF00]">
                             <ChevronLeft className="h-4 w-4" />
                             Back to Artists
                         </Link>
@@ -398,14 +398,14 @@ export default function ArtistProfilePage() {
                             {performanceType && (
                                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                                     <Mic className="mb-3 h-5 w-5 text-[#D5FF00]" />
-                                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-500">Performance Type</p>
+                                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-300">Performance Type</p>
                                     <p className="text-lg text-white">{performanceType}</p>
                                 </div>
                             )}
                             {languages.length > 0 && (
                                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                                     <Globe className="mb-3 h-5 w-5 text-[#D5FF00]" />
-                                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-500">Languages</p>
+                                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-300">Languages</p>
                                     <div className="flex flex-wrap gap-1.5">
                                         {languages.map((lang, i) => (
                                             <span key={i} className="rounded-full bg-white/10 px-3 py-1 text-sm text-white">{lang}</span>
@@ -416,14 +416,14 @@ export default function ArtistProfilePage() {
                             {artist.is_band !== null && artist.is_band !== undefined && (
                                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                                     <Users className="mb-3 h-5 w-5 text-[#D5FF00]" />
-                                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-500">Artist Type</p>
+                                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-300">Artist Type</p>
                                     <p className="text-lg text-white">{artist.is_band ? 'Band / Group' : 'Solo Artist'}</p>
                                 </div>
                             )}
                             {artist.set_length && (
                                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                                     <Calendar className="mb-3 h-5 w-5 text-[#D5FF00]" />
-                                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-500">Set Length</p>
+                                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-300">Set Length</p>
                                     <p className="text-lg text-white">{artist.set_length}</p>
                                 </div>
                             )}
@@ -431,7 +431,7 @@ export default function ArtistProfilePage() {
 
                         {lookingFor.length > 0 && (
                             <div className="mt-12">
-                                <h3 className="oswald-500 mb-4 text-center text-sm uppercase tracking-[0.2em] text-gray-500">Looking For</h3>
+                                <h3 className="oswald-500 mb-4 text-center text-sm uppercase tracking-[0.2em] text-gray-300">Looking For</h3>
                                 <div className="flex flex-wrap justify-center gap-3">
                                     {lookingFor.map((item, i) => (
                                         <span key={i} className="rounded-full border border-[#D5FF00]/30 bg-[#D5FF00]/10 px-5 py-2.5 text-sm font-medium text-[#D5FF00]">{item}</span>
@@ -480,7 +480,7 @@ export default function ArtistProfilePage() {
                                             {artist.travel_radius === 'international' && 'International'}
                                         </p>
                                         {artist.travel_notes && (
-                                            <p className="text-sm leading-relaxed text-gray-400">{artist.travel_notes}</p>
+                                            <p className="text-sm leading-relaxed text-gray-300">{artist.travel_notes}</p>
                                         )}
                                     </div>
                                 )}
@@ -505,9 +505,9 @@ export default function ArtistProfilePage() {
                                             <Wrench className="h-5 w-5 text-[#D5FF00]" />
                                             <h3 className="oswald-500 text-lg uppercase tracking-wider text-white">Equipment & Tech</h3>
                                         </div>
-                                        <p className="text-sm leading-relaxed text-gray-400">{artist.equipment_notes}</p>
+                                        <p className="text-sm leading-relaxed text-gray-300">{artist.equipment_notes}</p>
                                         {artist.technical_requirements && (
-                                            <p className="mt-3 text-sm leading-relaxed text-gray-500">{artist.technical_requirements}</p>
+                                            <p className="mt-3 text-sm leading-relaxed text-gray-300">{artist.technical_requirements}</p>
                                         )}
                                     </div>
                                 )}
@@ -535,8 +535,8 @@ export default function ArtistProfilePage() {
                                         <div className="space-y-3">
                                             {artist.avg_response_time && (
                                                 <div className="flex items-center gap-2">
-                                                    <MessageSquare className="h-4 w-4 text-gray-500" />
-                                                    <span className="text-sm text-gray-400">Avg. response time: <span className="text-white">{artist.avg_response_time}</span></span>
+                                                    <MessageSquare className="h-4 w-4 text-gray-300" />
+                                                    <span className="text-sm text-gray-300">Avg. response time: <span className="text-white">{artist.avg_response_time}</span></span>
                                                 </div>
                                             )}
                                             {artist.collaboration_open && (
@@ -618,7 +618,7 @@ export default function ArtistProfilePage() {
                                             </div>
                                             <div>
                                                 <p className="font-medium text-white">Listen on Spotify</p>
-                                                <p className="text-sm text-gray-500">Stream music and playlists</p>
+                                                <p className="text-sm text-gray-300">Stream music and playlists</p>
                                             </div>
                                         </a>
                                     )}
@@ -634,7 +634,7 @@ export default function ArtistProfilePage() {
                                             </div>
                                             <div>
                                                 <p className="font-medium text-white">Watch on YouTube</p>
-                                                <p className="text-sm text-gray-500">Videos and performances</p>
+                                                <p className="text-sm text-gray-300">Videos and performances</p>
                                             </div>
                                         </a>
                                     )}
@@ -684,8 +684,8 @@ export default function ArtistProfilePage() {
                                     </div>
                                     <p className="text-lg text-white">
                                         <span className="font-bold">{artist.avg_rating}</span>
-                                        <span className="text-gray-500"> / 5</span>
-                                        <span className="ml-2 text-sm text-gray-500">({artist.review_count} {artist.review_count === 1 ? 'review' : 'reviews'})</span>
+                                        <span className="text-gray-300"> / 5</span>
+                                        <span className="ml-2 text-sm text-gray-300">({artist.review_count} {artist.review_count === 1 ? 'review' : 'reviews'})</span>
                                     </p>
                                 </div>
                             )}
@@ -697,10 +697,10 @@ export default function ArtistProfilePage() {
                                             <div className="mb-3 flex flex-wrap items-center gap-4">
                                                 <span className="font-medium text-white">{r.reviewer_name}</span>
                                                 {r.event_type && (
-                                                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-gray-400">{r.event_type}</span>
+                                                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-gray-300">{r.event_type}</span>
                                                 )}
                                                 {r.event_date && (
-                                                    <span className="text-xs text-gray-500">{new Date(r.event_date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+                                                    <span className="text-xs text-gray-300">{new Date(r.event_date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
                                                 )}
                                                 <div className="flex items-center gap-0.5">
                                                     {[1,2,3,4,5].map(s => (
@@ -724,12 +724,12 @@ export default function ArtistProfilePage() {
                             Ready to<br />
                             <span className="text-[#D5FF00]">Book {artist.first_name}?</span>
                         </h2>
-                        <p className="mx-auto mt-4 max-w-lg text-lg text-gray-400">
+                        <p className="mx-auto mt-4 max-w-lg text-lg text-gray-300">
                             Send a booking request and {artist.first_name} will get back to you with availability and details.
                         </p>
 
                         {artist.starting_price && (
-                            <p className="mt-4 text-sm text-gray-500">
+                            <p className="mt-4 text-sm text-gray-300">
                                 Starting from <span className="font-semibold text-[#D5FF00]">${artist.starting_price}</span>
                                 {artist.price_type && <span> / {artist.price_type}</span>}
                             </p>
@@ -750,7 +750,7 @@ export default function ArtistProfilePage() {
                             </p>
                         )}
                         {artist.avg_response_time && (
-                            <p className="mt-2 flex items-center justify-center gap-2 text-xs text-gray-500">
+                            <p className="mt-2 flex items-center justify-center gap-2 text-xs text-gray-300">
                                 <Clock className="h-3.5 w-3.5" />
                                 Avg. response time: {artist.avg_response_time}
                             </p>
